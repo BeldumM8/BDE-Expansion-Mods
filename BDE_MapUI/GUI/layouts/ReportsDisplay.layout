@@ -1,0 +1,584 @@
+FrameWidgetClass ReportsRoot
+{
+    position 0 0
+    size 1 1
+    hexactpos 0
+    vexactpos 0
+    hexactsize 0
+    vexactsize 0
+    visible 1
+    {
+        ButtonWidgetClass ReportMine
+        {
+            position 0.01 0.01
+            size 0.16 0.05
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            color 0.08 0.15 0.21 1
+            style DayZDefaultButtonNoBorder
+            {
+                TextWidgetClass ReportMineLabel
+                {
+                    position 0.03 0
+                    size 0.94 1
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    color 0.73 0.82 0.88 1
+                    text "My reports"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 18
+                    "text valign" center
+                }
+            }
+        }
+        ButtonWidgetClass ReportAdmin
+        {
+            position 0.18 0.01
+            size 0.18 0.05
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            color 0.08 0.15 0.21 1
+            style DayZDefaultButtonNoBorder
+            {
+                TextWidgetClass ReportAdminLabel
+                {
+                    position 0.03 0
+                    size 0.94 1
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    color 0.73 0.82 0.88 1
+                    text "Administration"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 18
+                    "text valign" center
+                }
+            }
+        }
+        ButtonWidgetClass ReportRefresh
+        {
+            position 0.37 0.01
+            size 0.12 0.05
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            color 0.08 0.15 0.21 1
+            style DayZDefaultButtonNoBorder
+            {
+                TextWidgetClass ReportRefreshLabel
+                {
+                    position 0.03 0
+                    size 0.94 1
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    color 0.73 0.82 0.88 1
+                    text "Refresh"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 18
+                    "text valign" center
+                }
+            }
+        }
+        TextListboxWidgetClass ReportList
+        {
+            position 0.01 0.08
+            size 0.35 0.73
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            color 0.05 0.08 0.10 1
+            style Default
+            "title visible" 0
+            colums "1"
+            lines 25
+            "highlight row" 1
+            font "gui/fonts/sdf_MetronLight24"
+        }
+        ButtonWidgetClass ReportPrev
+        {
+            position 0.01 0.83
+            size 0.11 0.045
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            color 0.08 0.15 0.21 1
+            style DayZDefaultButtonNoBorder
+            {
+                TextWidgetClass ReportPrevLabel
+                {
+                    position 0.03 0
+                    size 0.94 1
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    color 0.73 0.82 0.88 1
+                    text "Previous"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 18
+                    "text valign" center
+                }
+            }
+        }
+        TextWidgetClass ReportPage
+        {
+            position 0.13 0.83
+            size 0.1 0.045
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            ignorepointer 1
+            color 0.73 0.82 0.88 1
+            text "Page 1"
+            font "gui/fonts/sdf_MetronBook24"
+            "exact text" 1
+            "exact text size" 18
+            "text valign" center
+        }
+        ButtonWidgetClass ReportNext
+        {
+            position 0.24 0.83
+            size 0.12 0.045
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            color 0.08 0.15 0.21 1
+            style DayZDefaultButtonNoBorder
+            {
+                TextWidgetClass ReportNextLabel
+                {
+                    position 0.03 0
+                    size 0.94 1
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    color 0.73 0.82 0.88 1
+                    text "Next"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 18
+                    "text valign" center
+                }
+            }
+        }
+        ButtonWidgetClass ReportNew
+        {
+            position 0.01 0.9
+            size 0.35 0.06
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            color 0.08 0.15 0.21 1
+            style DayZDefaultButtonNoBorder
+            {
+                TextWidgetClass ReportNewLabel
+                {
+                    position 0.03 0
+                    size 0.94 1
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    color 0.73 0.82 0.88 1
+                    text "New report"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 18
+                    "text valign" center
+                }
+            }
+        }
+        PanelWidgetClass ReportCompose
+        {
+            position 0.39 0.08
+            size 0.6 0.8
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            style rover_sim_colorable
+            color 0.025 0.045 0.06 1
+            {
+                TextWidgetClass ReportTypeLabel
+                {
+                    position 0.02 0.01
+                    size 0.96 0.04
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    color 0.73 0.82 0.88 1
+                    text "REPORT TYPE"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 18
+                    "text valign" center
+                }
+                XComboBoxWidgetClass ReportType
+                {
+                    position 0.02 0.08
+                    size 0.96 0.035
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    style Default
+                    font "gui/fonts/sdf_MetronBook24"
+                }
+                TextWidgetClass ReportSubjectLabel
+                {
+                    position 0.02 0.15
+                    size 0.96 0.04
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    color 0.73 0.82 0.88 1
+                    text "SUBJECT / PLAYER NAME"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 18
+                    "text valign" center
+                }
+                EditBoxWidgetClass ReportSubject
+                {
+                    position 0.02 0.2
+                    size 0.96 0.07
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    color 1 1 1 1
+                    style Default
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 18
+                    text ""
+                }
+                TextWidgetClass ReportMessageLabel
+                {
+                    position 0.02 0.3
+                    size 0.96 0.05
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    color 0.73 0.82 0.88 1
+                    text "WHAT HAPPENED? Include names, time and details."
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 18
+                    "text valign" center
+                }
+                MultilineEditBoxWidgetClass ReportMessage
+                {
+                    position 0.02 0.36
+                    size 0.96 0.48
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    color 1 1 1 1
+                    style Default
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 18
+                    text ""
+                }
+                ButtonWidgetClass ReportSubmit
+                {
+                    position 0.02 0.88
+                    size 0.96 0.07
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    color 0.08 0.15 0.21 1
+                    style DayZDefaultButtonNoBorder
+                    {
+                        TextWidgetClass ReportSubmitLabel
+                        {
+                            position 0.03 0
+                            size 0.94 1
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            ignorepointer 1
+                            color 0.73 0.82 0.88 1
+                            text "Submit report"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 18
+                            "text valign" center
+                        }
+                    }
+                }
+            }
+        }
+        PanelWidgetClass ReportDetail
+        {
+            position 0.39 0.08
+            size 0.6 0.8
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            visible 0
+            style rover_sim_colorable
+            color 0.025 0.045 0.06 1
+            {
+                ButtonWidgetClass ReportToggleDetails
+                {
+                    position 0.02 0.01
+                    size 0.30 0.065
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    visible 0
+                    color 0.08 0.15 0.21 1
+                    style DayZDefaultButtonNoBorder
+                    {
+                        TextWidgetClass ReportToggleDetailsLabel
+                        {
+                            position 0.03 0
+                            size 0.94 1
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            ignorepointer 1
+                            color 0.73 0.82 0.88 1
+                            text "Show details"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 18
+                            "text valign" center
+                        }
+                    }
+                }
+                TextWidgetClass ReportOwnerTitle
+                {
+                    position 0.34 0.01
+                    size 0.64 0.065
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    color 0.73 0.82 0.88 1
+                    text ""
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 22
+                    "text valign" center
+                }
+                ScrollWidgetClass ReportDetailScroll
+                {
+                    position 0.02 0.09
+                    size 0.96 0.51
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    style blank
+                    "Scrollbar V" 1
+                    {
+                        RichTextWidgetClass ReportDetailText
+                        {
+                            position 0 0
+                            size 0.96 1
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            ignorepointer 1
+                            style DayZNormal
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 18
+                            "size to text v" 0
+                            wrap 1
+                        }
+                    }
+                }
+                FrameWidgetClass ReportAdminTools
+                {
+                    position 0.0 0.63
+                    size 1 0.36
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    visible 0
+                    {
+                        TextWidgetClass ReportReplyLabel
+                        {
+                            position 0.02 0
+                            size 0.96 0.12
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            ignorepointer 1
+                            color 0.73 0.82 0.88 1
+                            text "ADD A MESSAGE"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 18
+                            "text valign" center
+                        }
+                        MultilineEditBoxWidgetClass ReportReply
+                        {
+                            position 0.02 0.14
+                            size 0.96 0.57
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            color 1 1 1 1
+                            style Default
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 18
+                            text ""
+                        }
+                        ButtonWidgetClass ReportRespond
+                        {
+                            position 0.02 0.76
+                            size 0.44 0.22
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            color 0.08 0.15 0.21 1
+                            style DayZDefaultButtonNoBorder
+                            {
+                                TextWidgetClass ReportRespondLabel
+                                {
+                                    position 0.03 0
+                                    size 0.94 1
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    ignorepointer 1
+                                    color 0.73 0.82 0.88 1
+                                    text "Send message"
+                                    font "gui/fonts/sdf_MetronBook24"
+                                    "exact text" 1
+                                    "exact text size" 18
+                                    "text valign" center
+                                }
+                            }
+                        }
+                        ButtonWidgetClass ReportClose
+                        {
+                            position 0.48 0.76
+                            size 0.22 0.22
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            color 0.08 0.15 0.21 1
+                            style DayZDefaultButtonNoBorder
+                            {
+                                TextWidgetClass ReportCloseLabel
+                                {
+                                    position 0.03 0
+                                    size 0.94 1
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    ignorepointer 1
+                                    color 0.73 0.82 0.88 1
+                                    text "Close"
+                                    font "gui/fonts/sdf_MetronBook24"
+                                    "exact text" 1
+                                    "exact text size" 18
+                                    "text valign" center
+                                }
+                            }
+                        }
+                        ButtonWidgetClass ReportDelete
+                        {
+                            position 0.72 0.76
+                            size 0.26 0.22
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            color 0.08 0.15 0.21 1
+                            style DayZDefaultButtonNoBorder
+                            {
+                                TextWidgetClass ReportDeleteLabel
+                                {
+                                    position 0.03 0
+                                    size 0.94 1
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    ignorepointer 1
+                                    color 0.73 0.82 0.88 1
+                                    text "Delete"
+                                    font "gui/fonts/sdf_MetronBook24"
+                                    "exact text" 1
+                                    "exact text size" 18
+                                    "text valign" center
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        TextWidgetClass ReportStatus
+        {
+            position 0.39 0.9
+            size 0.6 0.065
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            ignorepointer 1
+            color 0.73 0.82 0.88 1
+            text ""
+            font "gui/fonts/sdf_MetronBook24"
+            "exact text" 1
+            "exact text size" 16
+            "text valign" center
+        }
+    }
+}

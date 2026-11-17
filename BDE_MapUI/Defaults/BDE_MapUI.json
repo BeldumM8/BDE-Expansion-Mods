@@ -1,0 +1,163 @@
+{
+    "ConfigVersion": 5,
+    "ShowMapTools": 1,
+    "ShowCurrency": 1,
+    "BankLabel": "Bank",
+    "InventoryLabel": "Cash",
+	"PassiveIncomeAmount": 4000,
+	"PassiveRPAmount": 40,
+	"MinBountyAmount": 50000,
+    "SidebarRefreshSeconds": 30,
+    "ShowDonationGoal": 1,
+    "ShowDonationMessage": 1,
+    "OpenInfoOnMapOpen": 0,
+    "VIPURL": "https://buymeacoffee.com/bdedayz/membership",
+    "ReportAdminSteamIDs": [
+        "AdminsSteamID"
+    ],
+    "ReportCooldownSeconds": 60,
+    "MaxOpenReportsPerPlayer": 5,
+    "Tabs": [
+        {
+            "Enabled": 1,
+            "Type": "STATIC",
+            "Label": "Changelog",
+            "Heading": "Changelog",
+            "Content": [
+                "<h1>Update day/month/year</h1>",
+                "<p>This is where you can list updates made to your server.</p>",
+                "<p></p>",
+                "<p>The content of the changelog is snapshotted so if you update the change log, it automatically opens the Changelog UI when a player first opens their map menu.</p>",
+                "<p>This allows players to automatically be kept up to date with updates and changes made to your server.</p>",
+                "<p></p>",
+                "<p>Once a player has seen the new changelog, their SteamID is saved so it does not automatically open for them again until the changelog is updated again.</p>"
+            ]
+        },
+        {
+            "Enabled": 1,
+            "Type": "BOUNTIES",
+            "Label": "Bounties",
+            "Heading": "Bounty Board",
+            "Content": []
+        },
+        {
+            "Enabled": 1,
+            "Type": "LEADERBOARD",
+            "Label": "Leaderboard",
+            "Heading": "Player Leaderboard",
+            "Content": []
+        },
+        {
+            "Enabled": 1,
+            "Type": "POINTS_STORE",
+            "Label": "Point Store",
+            "Heading": "Task Point Store",
+            "Content": []
+        },
+        {
+            "Enabled": 1,
+            "Type": "CRAFTING",
+            "Label": "Crafting",
+            "Heading": "Crafting Guide",
+            "Content": []
+        },
+        {
+            "Enabled": 1,
+            "Type": "PLAYER",
+            "Label": "Player",
+            "Heading": "Player Information",
+            "Content": []
+        },
+        {
+            "Enabled": 1,
+            "Type": "VIP_ADMIN",
+            "Label": "VIP",
+            "Heading": "VIP Manager",
+            "Content": []
+        },
+        {
+            "Enabled": 1,
+            "Type": "STATIC",
+            "Label": "Button 1",
+            "Heading": "Button 1",
+            "Content": [
+                "<h1>This is a main heading!</h1>",
+                "<p></p>",
+                "<p>^^ that above is a blank space!</p>",
+                "<p></p>",
+                "<h2>This is a sub heading!</h2>",
+                "<p></p>",
+                "<p><b>This is bolt text!</b></p>",
+                "<p></p>",
+                "<p>This is normal text!</p>"
+            ]
+        },
+        {
+            "Enabled": 1,
+            "Type": "STATIC",
+            "Label": "Button 2",
+            "Heading": "Button 2",
+            "Content": [
+                "<h1>Button 2 heading!</h1>",
+                "<p></p>",
+                "<p>Add content here</p>"
+            ]
+        },
+        {
+            "Enabled": 1,
+            "Type": "STATIC",
+            "Label": "Button 3",
+            "Heading": "Button 3",
+            "Content": [
+                "<h1>Button 3 heading!</h1>",
+                "<p></p>",
+                "<p>Add content here</p>"
+            ]
+        },
+        {
+            "Enabled": 1,
+            "Type": "STATIC",
+            "Label": "Button 4",
+            "Heading": "Button 4",
+            "Content": [
+                "<h1>Button 4 heading!</h1>",
+                "<p></p>",
+                "<p>Add content here</p>"
+            ]
+        },
+        {
+            "Enabled": 1,
+            "Type": "STATIC",
+            "Label": "Button 5",
+            "Heading": "Button 5",
+            "Content": [
+                "<h1>Button 5 heading!</h1>",
+                "<p></p>",
+                "<p>Add content here</p>"
+            ]
+        }
+    ],
+    "Links": [
+        {
+            "Enabled": 1,
+            "Label": "Discord",
+            "URL": "https://discord.gg/dzd3sNrnJT"
+        },
+        {
+            "Enabled": 1,
+            "Label": "BuyMeACoffee",
+            "URL": "https://buymeacoffee.com/bdedayz/membership"
+        },
+        {
+            "Enabled": 1,
+            "Label": "PayPal",
+            "URL": "https://paypal.me/FYGDayZ"
+        }
+    ],
+    "ReportTypes": [
+        "Report Player",
+        "Report Glitch",
+        "Lost Item",
+        "Other"
+    ]
+}

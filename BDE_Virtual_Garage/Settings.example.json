@@ -1,0 +1,24 @@
+{
+    "Version": 5,
+    "Enabled": 1,
+    "GarageAccessObjects": [
+        "NP_GarageParkingMeter"
+    ],
+    "MatchInheritedAccessObjectClasses": 1,
+    "VehicleStoreRangeMeters": 30.0,
+    "MaxStoredVehiclesPerOwner": 10,
+    "MaxStoredVehiclesPerOwnerOutsideTraderZone": 10,
+    "AllowGroupAccess": 1,
+    "RequireVehicleEmpty": 1,
+    "RequireEngineOff": 1,
+    "MaximumStoreSpeedKmh": 1.0,
+    "AllowRuinedVehicles": 0,
+    "AllowStoringDynamicEventVehicles": 0,
+    "AllowStoringClaimedDEVehicles": 0,
+    "AllowCrossWorldRetrieval": 0,
+    "AlternativeSpawnMaximumRadiusMeters": 40.0,
+    "AlternativeSpawnStepMeters": 4.0,
+    "AlternativeSpawnDirections": 16,
+    "AlternativeSpawnMaximumTerrainDeltaMeters": 1.25,
+    "DebugLogging": 0
+}

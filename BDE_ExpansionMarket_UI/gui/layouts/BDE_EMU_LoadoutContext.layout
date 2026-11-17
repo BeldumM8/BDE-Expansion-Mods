@@ -1,0 +1,102 @@
+PanelWidgetClass LoadoutContext
+{
+    position 0 0
+    size 230 114
+    hexactpos 1
+    vexactpos 1
+    hexactsize 1
+    vexactsize 1
+    visible 1
+    priority 100
+    style rover_sim_colorable
+    color 0.03 0.07 0.10 1
+    {
+        ButtonWidgetClass ContextSave
+        {
+            position 0 0
+            size 230 38
+            hexactpos 1
+            vexactpos 1
+            hexactsize 1
+            vexactsize 1
+            style Default
+            color 0.05 0.10 0.15 1
+            {
+                TextWidgetClass SaveConfigurationLabel
+                {
+                    position 0.04 0
+                    size 0.92 1
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "Save Configuration"
+                    font "gui/fonts/sdf_MetronBook24"
+                    color 1 1 1 1
+                    "exact text" 1
+                    "exact text size" 18
+                    "text valign" center
+                }
+            }
+        }
+        ButtonWidgetClass ContextFill
+        {
+            position 0 0
+            size 230 38
+            hexactpos 1
+            vexactpos 1
+            hexactsize 1
+            vexactsize 1
+            style Default
+            color 0.05 0.10 0.15 1
+            {
+                TextWidgetClass FillwithAmmoLabel
+                {
+                    position 0.04 0
+                    size 0.92 1
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "Fill with Ammo"
+                    font "gui/fonts/sdf_MetronBook24"
+                    color 1 1 1 1
+                    "exact text" 1
+                    "exact text size" 18
+                    "text valign" center
+                }
+            }
+        }
+        ButtonWidgetClass ContextRemove
+        {
+            position 0 0.333
+            size 230 38
+            hexactpos 1
+            vexactpos 1
+            hexactsize 1
+            vexactsize 1
+            style Default
+            color 0.05 0.10 0.15 1
+            {
+                TextWidgetClass RemoveAmmoLabel
+                {
+                    position 0.04 0
+                    size 0.92 1
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "Remove Ammo"
+                    font "gui/fonts/sdf_MetronBook24"
+                    color 1 1 1 1
+                    "exact text" 1
+                    "exact text size" 18
+                    "text valign" center
+                }
+            }
+        }
+    }
+}

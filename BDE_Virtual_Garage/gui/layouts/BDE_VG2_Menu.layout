@@ -1,0 +1,516 @@
+FrameWidgetClass BDE_VG2_Root {
+ visible 1
+ color 0 0 0 0
+ position 0 0
+ size 1 1
+ halign fill
+ valign fill
+ {
+ PanelWidgetClass HeaderPanel {
+  visible 1
+  position 0 0
+  size 200 60
+  hexactpos 1
+  vexactpos 1
+  hexactsize 1
+  vexactsize 1
+  color 0.006 0.012 0.035 0.97
+  style rover_sim_colorable
+  {
+   TextWidgetClass TitleText {
+    visible 1
+    position 0 0
+    size 200 60
+    hexactpos 1
+    vexactpos 1
+    hexactsize 1
+    vexactsize 1
+    color 0.94 0.96 1 1
+    text "BDE VIRTUAL GARAGE"
+    font "gui/fonts/Metron28"
+    "text valign" center
+   }
+   TextWidgetClass VersionText {
+    visible 1
+    position 0 0
+    size 200 60
+    hexactpos 1
+    vexactpos 1
+    hexactsize 1
+    vexactsize 1
+    color 0.65 0.75 0.84 1
+    text "v2.8.0"
+    font "gui/fonts/Metron22"
+    "text halign" right
+   }
+   ButtonWidgetClass CloseButton {
+    visible 1
+    position 0 0
+    size 200 60
+    hexactpos 1
+    vexactpos 1
+    hexactsize 1
+    vexactsize 1
+    color 0.30 0.01 0.02 1
+    text "X"
+    font "gui/fonts/Metron28"
+   }
+   TextWidgetClass AccessText {
+    visible 1
+    position 0 0
+    size 200 60
+    hexactpos 1
+    vexactpos 1
+    hexactsize 1
+    vexactsize 1
+    color 0.94 0.96 1 1
+    text "STORE RANGE"
+    font "gui/fonts/Metron22"
+    "text valign" center
+   }
+   TextWidgetClass SummaryText {
+    visible 1
+    position 0 0
+    size 200 60
+    hexactpos 1
+    vexactpos 1
+    hexactsize 1
+    vexactsize 1
+    color 0.65 0.75 0.84 1
+    text "BDE VEHICLE LOCKS OWNERSHIP  |  LIVE EXPANSION GROUP ACCESS"
+    font "gui/fonts/Metron22"
+    "text valign" center
+   }
+   TextWidgetClass CountText {
+    visible 1
+    position 0 0
+    size 200 60
+    hexactpos 1
+    vexactpos 1
+    hexactsize 1
+    vexactsize 1
+    color 0.23 0.73 0.47 1
+    text "NEARBY VEHICLES: 0"
+    font "gui/fonts/Metron22"
+    "text valign" center
+   }
+   ButtonWidgetClass RefreshButton {
+    visible 1
+    position 0 0
+    size 200 60
+    hexactpos 1
+    vexactpos 1
+    hexactsize 1
+    vexactsize 1
+    color 0.025 0.16 0.25 1
+    text "REFRESH LIVE DATA"
+    font "gui/fonts/Metron18"
+   }
+  }
+ }
+ PanelWidgetClass LeftPanel {
+  visible 1
+  position 0 0
+  size 200 60
+  hexactpos 1
+  vexactpos 1
+  hexactsize 1
+  vexactsize 1
+  color 0.003 0.007 0.013 0.97
+  style rover_sim_colorable
+  {
+   ButtonWidgetClass NearbyTabButton {
+    visible 1
+    position 0 0
+    size 200 60
+    hexactpos 1
+    vexactpos 1
+    hexactsize 1
+    vexactsize 1
+    color 0.043 0.31 0.49 1
+    text "NEARBY VEHICLES"
+    font "gui/fonts/Metron22"
+   }
+   ButtonWidgetClass StoredTabButton {
+    visible 1
+    position 0 0
+    size 200 60
+    hexactpos 1
+    vexactpos 1
+    hexactsize 1
+    vexactsize 1
+    color 0.01 0.015 0.022 1
+    text "STORED VEHICLES"
+    font "gui/fonts/Metron22"
+   }
+   TextWidgetClass ListHeaderText {
+    visible 1
+    position 0 0
+    size 200 60
+    hexactpos 1
+    vexactpos 1
+    hexactsize 1
+    vexactsize 1
+    color 0.65 0.75 0.84 1
+    text "SELECT A VEHICLE"
+    font "gui/fonts/Metron22"
+    "text valign" center
+   }
+   TextListboxWidgetClass VehicleList {
+    visible 1
+    position 0 0
+    size 200 60
+    hexactpos 1
+    vexactpos 1
+    hexactsize 1
+    vexactsize 1
+    color 0.001 0.002 0.004 1
+    font "gui/fonts/Metron22"
+    clipchildren 1
+   }
+   PanelWidgetClass SelectedSeparator {
+    visible 1
+    position 0 0
+    size 200 60
+    hexactpos 1
+    vexactpos 1
+    hexactsize 1
+    vexactsize 1
+    color 0.022 0.14 0.25 1
+    style rover_sim_colorable
+   }
+   TextWidgetClass NameText {
+    visible 1
+    position 0 0
+    size 200 60
+    hexactpos 1
+    vexactpos 1
+    hexactsize 1
+    vexactsize 1
+    color 0.94 0.96 1 1
+    text "NO VEHICLE SELECTED"
+    font "gui/fonts/Metron22"
+    "text valign" center
+   }
+   TextWidgetClass ClassText {
+    visible 1
+    position 0 0
+    size 200 60
+    hexactpos 1
+    vexactpos 1
+    hexactsize 1
+    vexactsize 1
+    color 0.48 0.67 0.82 1
+    text ""
+    font "gui/fonts/Metron22"
+    "text valign" center
+   }
+   TextWidgetClass OwnerText {
+    visible 1
+    position 0 0
+    size 200 60
+    hexactpos 1
+    vexactpos 1
+    hexactsize 1
+    vexactsize 1
+    color 0.78 0.82 0.87 1
+    text ""
+    font "gui/fonts/Metron22"
+    "text valign" center
+   }
+   TextWidgetClass StatusText {
+    visible 1
+    position 0 0
+    size 200 60
+    hexactpos 1
+    vexactpos 1
+    hexactsize 1
+    vexactsize 1
+    color 0.78 0.82 0.87 1
+    text ""
+    font "gui/fonts/Metron22"
+    "text valign" center
+   }
+   TextWidgetClass HealthText {
+    visible 1
+    position 0 0
+    size 200 60
+    hexactpos 1
+    vexactpos 1
+    hexactsize 1
+    vexactsize 1
+    color 0.78 0.82 0.87 1
+    text ""
+    font "gui/fonts/Metron22"
+    "text valign" center
+   }
+   TextWidgetClass RetrievalText {
+    visible 1
+    position 0 0
+    size 200 60
+    hexactpos 1
+    vexactpos 1
+    hexactsize 1
+    vexactsize 1
+    color 0.78 0.82 0.87 1
+    text ""
+    font "gui/fonts/Metron22"
+    "text valign" center
+   }
+   PanelWidgetClass DifferentMapPanel {
+    visible 0
+    position 0 0
+    size 200 60
+    hexactpos 1
+    vexactpos 1
+    hexactsize 1
+    vexactsize 1
+    color 0 0 0 0
+    style rover_sim_colorable
+    {
+     CheckBoxWidgetClass DifferentMapCheckBox {
+      visible 1
+      position 0 0
+      size 200 60
+      hexactpos 1
+      vexactpos 1
+      hexactsize 1
+      vexactsize 1
+     }
+     TextWidgetClass DifferentMapText {
+      visible 1
+      position 0 0
+      size 200 60
+      hexactpos 1
+      vexactpos 1
+      hexactsize 1
+      vexactsize 1
+      color 0.65 0.75 0.84 1
+      text "Store for Retrieval on Different Map"
+      font "gui/fonts/Metron18"
+      "text valign" center
+      wrap 1
+     }
+    }
+   }
+   PanelWidgetClass RepairPanel {
+    visible 1
+    position 0 0
+    size 200 60
+    hexactpos 1
+    vexactpos 1
+    hexactsize 1
+    vexactsize 1
+    color 0 0 0 0
+    style rover_sim_colorable
+    {
+     CheckBoxWidgetClass RepairCheckBox {
+      visible 1
+      position 0 0
+      size 200 60
+      hexactpos 1
+      vexactpos 1
+      hexactsize 1
+      vexactsize 1
+     }
+     TextWidgetClass RepairText {
+      visible 1
+      position 0 0
+      size 200 60
+      hexactpos 1
+      vexactpos 1
+      hexactsize 1
+      vexactsize 1
+      color 0.65 0.75 0.84 1
+      text ""
+      font "gui/fonts/Metron18"
+      "text valign" center
+      wrap 1
+     }
+    }
+   }
+   ButtonWidgetClass ActionButton {
+    visible 1
+    position 0 0
+    size 200 60
+    hexactpos 1
+    vexactpos 1
+    hexactsize 1
+    vexactsize 1
+    color 0.043 0.31 0.49 1
+    text "STORE SELECTED VEHICLE"
+    font "gui/fonts/Metron22"
+   }
+   TextWidgetClass FeedbackText {
+    visible 1
+    position 0 0
+    size 200 60
+    hexactpos 1
+    vexactpos 1
+    hexactsize 1
+    vexactsize 1
+    color 0.62 0.80 0.72 1
+    text "Waiting for garage data..."
+    font "gui/fonts/Metron22"
+    wrap 1
+    "text valign" center
+   }
+  }
+ }
+ FrameWidgetClass PreviewViewport {
+  visible 1
+  position 0 0
+  size 200 60
+  hexactpos 1
+  vexactpos 1
+  hexactsize 1
+  vexactsize 1
+  color 0 0 0 0
+  ignorepointer 0
+  clipchildren 0
+  priority 1
+ }
+ ItemPreviewWidgetClass VehicleFallbackPreview {
+  visible 0
+  position 0 0
+  size 200 60
+  hexactpos 1
+  vexactpos 1
+  hexactsize 1
+  vexactsize 1
+  ignorepointer 1
+  draggable 0
+ }
+ PanelWidgetClass CargoPanel {
+  visible 0
+  position 0 0
+  size 200 60
+  hexactpos 1
+  vexactpos 1
+  hexactsize 1
+  vexactsize 1
+  color 0.003 0.007 0.013 0.97
+  style rover_sim_colorable
+  {
+   TextWidgetClass CargoHeaderText {
+    visible 1
+    position 0 0
+    size 200 60
+    hexactpos 1
+    vexactpos 1
+    hexactsize 1
+    vexactsize 1
+    color 0.65 0.75 0.84 1
+    text "VEHICLE CARGO"
+    font "gui/fonts/Metron28"
+    "text valign" center
+   }
+   PanelWidgetClass CargoSeparator {
+    visible 1
+    position 0 0
+    size 200 60
+    hexactpos 1
+    vexactpos 1
+    hexactsize 1
+    vexactsize 1
+    color 0.022 0.14 0.25 1
+    style rover_sim_colorable
+   }
+   TextListboxWidgetClass CargoList {
+    visible 1
+    position 0 0
+    size 200 60
+    hexactpos 1
+    vexactpos 1
+    hexactsize 1
+    vexactsize 1
+    color 0.001 0.002 0.004 1
+    font "gui/fonts/Metron22"
+    clipchildren 1
+   }
+  }
+ }
+ PanelWidgetClass ConfirmationPanel {
+  visible 0
+  position 0 0
+  size 200 60
+  hexactpos 1
+  vexactpos 1
+  hexactsize 1
+  vexactsize 1
+  color 0 0 0 0.76
+  style rover_sim_colorable
+  priority 50
+  {
+   PanelWidgetClass ConfirmBorder {
+    visible 1
+    position 0 0
+    size 200 60
+    hexactpos 1
+    vexactpos 1
+    hexactsize 1
+    vexactsize 1
+    color 0.003 0.007 0.013 0.97
+    style rover_sim_colorable
+    {
+     TextWidgetClass ConfirmTitle {
+      visible 1
+      position 0 0
+      size 200 60
+      hexactpos 1
+      vexactpos 1
+      hexactsize 1
+      vexactsize 1
+      color 0.94 0.96 1 1
+      text "ORIGINAL POSITION BLOCKED"
+      font "gui/fonts/Metron28"
+      "text halign" center
+      "text valign" center
+     }
+     MultilineTextWidgetClass ConfirmText {
+      visible 1
+      position 0 0
+      size 200 60
+      hexactpos 1
+      vexactpos 1
+      hexactsize 1
+      vexactsize 1
+      color 0.94 0.96 1 1
+      text ""
+      font "gui/fonts/Metron22"
+      wrap 1
+      "size to text h" 0
+      "size to text v" 0
+      "text halign" left
+      "text valign" top
+     }
+     ButtonWidgetClass ConfirmYesButton {
+      visible 1
+      position 0 0
+      size 200 60
+      hexactpos 1
+      vexactpos 1
+      hexactsize 1
+      vexactsize 1
+      color 0.02 0.34 0.14 1
+      text "RETRIEVE AT SAFE POSITION"
+      font "gui/fonts/Metron22"
+     }
+     ButtonWidgetClass ConfirmNoButton {
+      visible 1
+      position 0 0
+      size 200 60
+      hexactpos 1
+      vexactpos 1
+      hexactsize 1
+      vexactsize 1
+      color 0.40 0.02 0.02 1
+      text "CANCEL"
+      font "gui/fonts/Metron22"
+     }
+    }
+   }
+  }
+ }
+ }
+}

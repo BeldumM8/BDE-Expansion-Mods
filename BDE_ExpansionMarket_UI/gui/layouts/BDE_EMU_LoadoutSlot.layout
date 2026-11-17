@@ -1,0 +1,41 @@
+ButtonWidgetClass SlotTile
+{
+    position 0 0
+    size 70 70
+    hexactpos 1
+    vexactpos 1
+    hexactsize 1
+    vexactsize 1
+    visible 1
+    style Default
+    color 0.035 0.10 0.15 1
+    {
+        ItemPreviewWidgetClass SlotPreview
+        {
+            position 0.05 0.05
+            size 0.9 0.9
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            visible 1
+            ignorepointer 1
+            "force flip enable" 1
+        }
+        ImageWidgetClass SlotGhost
+        {
+            mode blend
+            "src alpha" 1
+            "stretch mode" stretch_w_h
+            imageTexture "set:dayz_inventory image:missing"
+            position 0.12 0.12
+            size 0.76 0.76
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            visible 1
+            ignorepointer 1
+        }
+    }
+}

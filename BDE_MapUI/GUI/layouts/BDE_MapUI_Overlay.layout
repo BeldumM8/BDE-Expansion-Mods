@@ -1,0 +1,912 @@
+FrameWidgetClass BDE_MapUI_Overlay
+{
+    visible 1
+    clipchildren 0
+    ignorepointer 1
+    position 0 0
+    size 1 1
+    halign center_ref
+    valign center_ref
+    hexactpos 0
+    vexactpos 0
+    hexactsize 0
+    vexactsize 0
+    priority 5
+    {
+        PanelWidgetClass BDE_LeftBackdrop
+        {
+            visible 1
+            ignorepointer 1
+            color 0.003 0.008 0.014 0.96
+            position 0 0
+            size 394 1
+            hexactpos 1
+            vexactpos 0
+            hexactsize 1
+            vexactsize 0
+            style UIDefaultPanel
+        }
+        PanelWidgetClass BDE_TopBackdrop
+        {
+            visible 1
+            ignorepointer 1
+            color 0.003 0.008 0.014 0.97
+            position 394 0
+            size 1 60
+            hexactpos 1
+            vexactpos 1
+            hexactsize 0
+            vexactsize 1
+            style UIDefaultPanel
+        }
+        PanelWidgetClass BDE_CurrencyPanel
+        {
+            visible 1
+            ignorepointer 1
+            color 0.004 0.012 0.022 0.98
+            position 14 12
+            size 362 66
+            hexactpos 1
+            vexactpos 1
+            hexactsize 1
+            vexactsize 1
+            style UIDefaultPanel
+            {
+                TextWidgetClass BDE_BankMoney
+                {
+                    visible 1
+                    ignorepointer 1
+                    color 0.68 0.84 0.96 1
+                    position 10 0.07575757575757576
+                    size 0.94 0.3939393939393939
+                    hexactpos 1
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    text "Bank: $0"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 16
+                    "text valign" center
+                }
+                TextWidgetClass BDE_InventoryMoney
+                {
+                    visible 1
+                    ignorepointer 1
+                    color 0.8627 0.8627 0.8627 1
+                    position 10 0.5151515151515151
+                    size 0.94 0.3939393939393939
+                    hexactpos 1
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    text "Cash: $0"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 16
+                    "text valign" center
+                }
+            }
+        }
+        PanelWidgetClass BDE_DonationPanel
+        {
+            visible 0
+            ignorepointer 1
+            color 0.004 0.012 0.022 0.98
+            position 14 86
+            size 362 112
+            hexactpos 1
+            vexactpos 1
+            hexactsize 1
+            vexactsize 1
+            style UIDefaultPanel
+            {
+                MultilineTextWidgetClass BDE_DonationMessage
+                {
+                    visible 1
+                    ignorepointer 1
+                    color 0.68 0.72 0.76 1
+                    position 10 0.05357142857142857
+                    size 0.94 0.4642857142857143
+                    hexactpos 1
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    text "Monthly server goal"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 13
+                    "text halign" center
+                    "text valign" center
+                    wrap 1
+                }
+                ProgressBarWidgetClass BDE_DonationProgress
+                {
+                    visible 1
+                    ignorepointer 1
+                    color 0.16 0.52 0.72 1
+                    position 12 0.5714285714285714
+                    size 0.93 0.15178571428571427
+                    hexactpos 1
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    style Default
+                }
+                TextWidgetClass BDE_DonationAmount
+                {
+                    visible 1
+                    ignorepointer 1
+                    color 0.8627 0.8627 0.8627 1
+                    position 10 0.75
+                    size 0.94 0.21428571428571427
+                    hexactpos 1
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    text "$0 / $0"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 14
+                    "text halign" center
+                    "text valign" center
+                }
+            }
+        }
+        ButtonWidgetClass BDE_DonationAdminButton
+        {
+            visible 0
+            position 14 86
+            size 362 112
+            hexactpos 1
+            vexactpos 1
+            hexactsize 1
+            vexactsize 1
+            color 0 0 0 0
+            text ""
+            priority 20
+        }
+        GridSpacerWidgetClass BDE_TopTabsGrid
+        {
+            visible 1
+            ignorepointer 1
+            position 410 9
+            size 0.68 42
+            hexactpos 1
+            vexactpos 1
+            hexactsize 0
+            vexactsize 1
+            Padding 0
+            Margin 4
+            Columns 6
+            Rows 1
+            {
+                ButtonWidgetClass BDE_Tab0
+                {
+                    visible 1
+                    size 1 1
+                    color 0.020 0.055 0.082 1
+                    style DayZDefaultButtonNoBorder
+                    text ""
+                    {
+                        TextWidgetClass BDE_TabLabel0
+                        {
+                            ignorepointer 1
+                            size 1 1
+                            hexactsize 0
+                            vexactsize 0
+                            text "Bounties"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 18
+                            "text halign" center
+                            "text valign" center
+                        }
+                    }
+                }
+                ButtonWidgetClass BDE_Tab1
+                {
+                    visible 1
+                    size 1 1
+                    color 0.020 0.055 0.082 1
+                    style DayZDefaultButtonNoBorder
+                    text ""
+                    {
+                        TextWidgetClass BDE_TabLabel1
+                        {
+                            ignorepointer 1
+                            size 1 1
+                            hexactsize 0
+                            vexactsize 0
+                            text "Leaderboard"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 18
+                            "text halign" center
+                            "text valign" center
+                        }
+                    }
+                }
+                ButtonWidgetClass BDE_Tab2
+                {
+                    visible 1
+                    size 1 1
+                    color 0.020 0.055 0.082 1
+                    style DayZDefaultButtonNoBorder
+                    text ""
+                    {
+                        TextWidgetClass BDE_TabLabel2
+                        {
+                            ignorepointer 1
+                            size 1 1
+                            hexactsize 0
+                            vexactsize 0
+                            text "Point Store"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 18
+                            "text halign" center
+                            "text valign" center
+                        }
+                    }
+                }
+                ButtonWidgetClass BDE_Tab3
+                {
+                    visible 1
+                    size 1 1
+                    color 0.020 0.055 0.082 1
+                    style DayZDefaultButtonNoBorder
+                    text ""
+                    {
+                        TextWidgetClass BDE_TabLabel3
+                        {
+                            ignorepointer 1
+                            size 1 1
+                            hexactsize 0
+                            vexactsize 0
+                            text "Crafting"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 18
+                            "text halign" center
+                            "text valign" center
+                        }
+                    }
+                }
+                ButtonWidgetClass BDE_Tab4
+                {
+                    visible 1
+                    size 1 1
+                    color 0.020 0.055 0.082 1
+                    style DayZDefaultButtonNoBorder
+                    text ""
+                    {
+                        TextWidgetClass BDE_TabLabel4
+                        {
+                            ignorepointer 1
+                            size 1 1
+                            hexactsize 0
+                            vexactsize 0
+                            text "Player"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 18
+                            "text halign" center
+                            "text valign" center
+                        }
+                    }
+                }
+                ButtonWidgetClass BDE_Tab9
+                {
+                    visible 0
+                    size 1 1
+                    color 0.020 0.055 0.082 1
+                    style DayZDefaultButtonNoBorder
+                    text ""
+                    {
+                        TextWidgetClass BDE_TabLabel9
+                        {
+                            ignorepointer 1
+                            size 1 1
+                            hexactsize 0
+                            vexactsize 0
+                            text "VIP"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 18
+                            "text halign" center
+                            "text valign" center
+                        }
+                    }
+                }
+            }
+        }
+        GridSpacerWidgetClass BDE_SideTabsGrid
+        {
+            visible 1
+            ignorepointer 1
+            position 14 50
+            size 362 112
+            valign bottom_ref
+            hexactpos 1
+            vexactpos 1
+            hexactsize 1
+            vexactsize 1
+            Padding 0
+            Margin 4
+            Columns 2
+            Rows 2
+            {
+                ButtonWidgetClass BDE_Tab5
+                {
+                    visible 1
+                    size 1 1
+                    color 0.020 0.055 0.082 1
+                    style DayZDefaultButtonNoBorder
+                    text ""
+                    {
+                        TextWidgetClass BDE_TabLabel5
+                        {
+                            ignorepointer 1
+                            size 1 1
+                            hexactsize 0
+                            vexactsize 0
+                            text "Info"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 18
+                            "text halign" center
+                            "text valign" center
+                        }
+                    }
+                }
+                ButtonWidgetClass BDE_Tab6
+                {
+                    visible 1
+                    size 1 1
+                    color 0.020 0.055 0.082 1
+                    style DayZDefaultButtonNoBorder
+                    text ""
+                    {
+                        TextWidgetClass BDE_TabLabel6
+                        {
+                            ignorepointer 1
+                            size 1 1
+                            hexactsize 0
+                            vexactsize 0
+                            text "Bases"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 18
+                            "text halign" center
+                            "text valign" center
+                        }
+                    }
+                }
+                ButtonWidgetClass BDE_Tab7
+                {
+                    visible 1
+                    size 1 1
+                    color 0.020 0.055 0.082 1
+                    style DayZDefaultButtonNoBorder
+                    text ""
+                    {
+                        TextWidgetClass BDE_TabLabel7
+                        {
+                            ignorepointer 1
+                            size 1 1
+                            hexactsize 0
+                            vexactsize 0
+                            text "AI Companions"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 18
+                            "text halign" center
+                            "text valign" center
+                        }
+                    }
+                }
+                ButtonWidgetClass BDE_Tab8
+                {
+                    visible 1
+                    size 1 1
+                    color 0.020 0.055 0.082 1
+                    style DayZDefaultButtonNoBorder
+                    text ""
+                    {
+                        TextWidgetClass BDE_TabLabel8
+                        {
+                            ignorepointer 1
+                            size 1 1
+                            hexactsize 0
+                            vexactsize 0
+                            text "Changelog"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 18
+                            "text halign" center
+                            "text valign" center
+                        }
+                    }
+                }
+            }
+        }
+        FrameWidgetClass BDE_SidebarControls
+        {
+            visible 1
+            ignorepointer 1
+            position 0 0
+            size 394 1
+            hexactpos 1
+            vexactpos 1
+            hexactsize 1
+            vexactsize 0
+            priority 6
+            {
+                PanelWidgetClass BDE_MarkerToggleHost
+                {
+                    visible 1
+                    ignorepointer 1
+                    position 334 264
+                    size 42 32
+                    hexactpos 1
+                    vexactpos 1
+                    hexactsize 1
+                    vexactsize 1
+                    priority 6
+                    style blank
+                }
+            }
+        }
+        PanelWidgetClass BDE_LinkBar
+        {
+            visible 1
+            ignorepointer 1
+            color 0.003 0.008 0.014 0.94
+            position 14 202
+            size 362 52
+            hexactpos 1
+            vexactpos 1
+            hexactsize 1
+            vexactsize 1
+            style UIDefaultPanel
+            {
+                ButtonWidgetClass BDE_Link0
+                {
+                    visible 0
+                    position 5 0.15384615384615385
+                    size 0.30 0.6923076923076923
+                    hexactpos 1
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    color 0.020 0.055 0.082 1
+                    style DayZDefaultButtonNoBorder
+                    text ""
+                    {
+                        TextWidgetClass BDE_LinkLabel0
+                        {
+                            ignorepointer 1
+                            size 1 1
+                            hexactsize 0
+                            vexactsize 0
+                            text "Discord"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 13
+                            "text halign" center
+                            "text valign" center
+                        }
+                    }
+                }
+                ButtonWidgetClass BDE_Link1
+                {
+                    visible 0
+                    position 0.345 0.15384615384615385
+                    size 0.30 0.6923076923076923
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    color 0.020 0.055 0.082 1
+                    style DayZDefaultButtonNoBorder
+                    text ""
+                    {
+                        TextWidgetClass BDE_LinkLabel1
+                        {
+                            ignorepointer 1
+                            size 1 1
+                            hexactsize 0
+                            vexactsize 0
+                            text "BuyMeACoffee"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 13
+                            "text halign" center
+                            "text valign" center
+                        }
+                    }
+                }
+                ButtonWidgetClass BDE_Link2
+                {
+                    visible 0
+                    position 0.675 0.15384615384615385
+                    size 0.30 0.6923076923076923
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    color 0.020 0.055 0.082 1
+                    style DayZDefaultButtonNoBorder
+                    text ""
+                    {
+                        TextWidgetClass BDE_LinkLabel2
+                        {
+                            ignorepointer 1
+                            size 1 1
+                            hexactsize 0
+                            vexactsize 0
+                            text "PayPal"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 13
+                            "text halign" center
+                            "text valign" center
+                        }
+                    }
+                }
+            }
+        }
+        PanelWidgetClass BDE_ContentPanel
+        {
+            visible 0
+            clipchildren 1
+            ignorepointer 0
+            color 0.003 0.008 0.014 0.985
+            position 410 74
+            size 0.68 0.845
+            hexactpos 1
+            vexactpos 1
+            hexactsize 0
+            vexactsize 0
+            priority 1
+            style UIDefaultPanel
+            {
+                PanelWidgetClass BDE_ContentHeader
+                {
+                    visible 1
+                    ignorepointer 1
+                    color 0.004 0.006 0.010 0.99
+                    position 0 0
+                    size 1 58
+                    hexactpos 0
+                    vexactpos 1
+                    hexactsize 0
+                    vexactsize 1
+                    style UIDefaultPanel
+                    {
+                        TextWidgetClass BDE_ContentTitle
+                        {
+                            visible 1
+                            ignorepointer 1
+                            color 0.68 0.84 0.96 1
+                            position 22 0
+                            size 0.80 58
+                            hexactpos 1
+                            vexactpos 1
+                            hexactsize 0
+                            vexactsize 1
+                            text "Information"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 25
+                            "bold text" 1
+                            "text valign" center
+                        }
+                        ButtonWidgetClass BDE_ContentClose
+                        {
+                            visible 1
+                            position 0.02 9
+                            size 42 40
+                            halign right_ref
+                            hexactpos 0
+                            vexactpos 1
+                            hexactsize 1
+                            vexactsize 1
+                            color 0.020 0.055 0.082 1
+                            style DayZDefaultButtonNoBorder
+                            text "X"
+                        }
+                    }
+                }
+                ScrollWidgetClass BDE_StaticScroll
+                {
+                    visible 0
+                    position 18 72
+                    size 0.965 0.88
+                    hexactpos 1
+                    vexactpos 1
+                    hexactsize 0
+                    vexactsize 0
+                    style blank
+                    "Scrollbar V" 1
+                    {
+                        RichTextWidgetClass BDE_ContentText
+                        {
+                            visible 1
+                            ignorepointer 1
+                            color 0.8627 0.8627 0.8627 1
+                            position 0 0
+                            size 0.97 1
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            style DayZNormal
+                            text ""
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 18
+                            "size to text v" 0
+                            "size to text h" 0
+                            wrap 1
+                        }
+                    }
+                }
+                PanelWidgetClass Tab_0
+                {
+                    visible 0
+                    ignorepointer 0
+                    position 12 68
+                    size 0.975 0.90
+                    hexactpos 1
+                    vexactpos 1
+                    hexactsize 0
+                    vexactsize 0
+                    style blank
+                }
+                PanelWidgetClass Tab_2
+                {
+                    visible 0
+                    ignorepointer 0
+                    position 12 68
+                    size 0.975 0.90
+                    hexactpos 1
+                    vexactpos 1
+                    hexactsize 0
+                    vexactsize 0
+                    style blank
+                }
+                PanelWidgetClass Tab_3
+                {
+                    visible 0
+                    ignorepointer 0
+                    position 12 68
+                    size 0.975 0.90
+                    hexactpos 1
+                    vexactpos 1
+                    hexactsize 0
+                    vexactsize 0
+                    style blank
+                }
+                PanelWidgetClass Tab_4
+                {
+                    visible 0
+                    ignorepointer 0
+                    position 12 68
+                    size 0.975 0.90
+                    hexactpos 1
+                    vexactpos 1
+                    hexactsize 0
+                    vexactsize 0
+                    style blank
+                }
+                PanelWidgetClass Tab_5
+                {
+                    visible 0
+                    ignorepointer 0
+                    position 12 68
+                    size 0.975 0.90
+                    hexactpos 1
+                    vexactpos 1
+                    hexactsize 0
+                    vexactsize 0
+                    style blank
+                }
+                PanelWidgetClass Tab_VIP
+                {
+                    visible 0
+                    ignorepointer 0
+                    position 12 68
+                    size 0.975 0.90
+                    hexactpos 1
+                    vexactpos 1
+                    hexactsize 0
+                    vexactsize 0
+                    style blank
+                }
+                PanelWidgetClass BDE_ReportsHost
+                {
+                    visible 0
+                    ignorepointer 0
+                    position 12 68
+                    size 0.975 0.90
+                    hexactpos 1
+                    vexactpos 1
+                    hexactsize 0
+                    vexactsize 0
+                    style blank
+                }
+                PanelWidgetClass BDE_GroupsHost
+                {
+                    visible 0
+                    ignorepointer 0
+                    position 12 68
+                    size 0.975 0.90
+                    hexactpos 1
+                    vexactpos 1
+                    hexactsize 0
+                    vexactsize 0
+                    style blank
+                }
+                FrameWidgetClass BDE_InfoTabs
+                {
+                    position 0.012 0.075
+                    size 0.975 0.052
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    visible 0
+                    {
+                        ButtonWidgetClass BDE_InfoTab0
+                        {
+                            position 0.0 0
+                            size 0.195 1
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            color 0.08 0.15 0.21 1
+                            style DayZDefaultButtonNoBorder
+                            {
+                                TextWidgetClass BDE_InfoTab0Label
+                                {
+                                    position 0.03 0
+                                    size 0.94 1
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    ignorepointer 1
+                                    color 0.73 0.82 0.88 1
+                                    text "Info"
+                                    font "gui/fonts/sdf_MetronBook24"
+                                    "exact text" 1
+                                    "exact text size" 18
+                                    "text valign" center
+                                }
+                            }
+                        }
+                        ButtonWidgetClass BDE_InfoTab1
+                        {
+                            position 0.2 0
+                            size 0.195 1
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            color 0.08 0.15 0.21 1
+                            style DayZDefaultButtonNoBorder
+                            {
+                                TextWidgetClass BDE_InfoTab1Label
+                                {
+                                    position 0.03 0
+                                    size 0.94 1
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    ignorepointer 1
+                                    color 0.73 0.82 0.88 1
+                                    text "Info"
+                                    font "gui/fonts/sdf_MetronBook24"
+                                    "exact text" 1
+                                    "exact text size" 18
+                                    "text valign" center
+                                }
+                            }
+                        }
+                        ButtonWidgetClass BDE_InfoTab2
+                        {
+                            position 0.4 0
+                            size 0.195 1
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            color 0.08 0.15 0.21 1
+                            style DayZDefaultButtonNoBorder
+                            {
+                                TextWidgetClass BDE_InfoTab2Label
+                                {
+                                    position 0.03 0
+                                    size 0.94 1
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    ignorepointer 1
+                                    color 0.73 0.82 0.88 1
+                                    text "Info"
+                                    font "gui/fonts/sdf_MetronBook24"
+                                    "exact text" 1
+                                    "exact text size" 18
+                                    "text valign" center
+                                }
+                            }
+                        }
+                        ButtonWidgetClass BDE_InfoTab3
+                        {
+                            position 0.6000000000000001 0
+                            size 0.195 1
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            color 0.08 0.15 0.21 1
+                            style DayZDefaultButtonNoBorder
+                            {
+                                TextWidgetClass BDE_InfoTab3Label
+                                {
+                                    position 0.03 0
+                                    size 0.94 1
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    ignorepointer 1
+                                    color 0.73 0.82 0.88 1
+                                    text "Info"
+                                    font "gui/fonts/sdf_MetronBook24"
+                                    "exact text" 1
+                                    "exact text size" 18
+                                    "text valign" center
+                                }
+                            }
+                        }
+                        ButtonWidgetClass BDE_InfoTab4
+                        {
+                            position 0.8 0
+                            size 0.195 1
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            color 0.08 0.15 0.21 1
+                            style DayZDefaultButtonNoBorder
+                            {
+                                TextWidgetClass BDE_InfoTab4Label
+                                {
+                                    position 0.03 0
+                                    size 0.94 1
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    ignorepointer 1
+                                    color 0.73 0.82 0.88 1
+                                    text "Info"
+                                    font "gui/fonts/sdf_MetronBook24"
+                                    "exact text" 1
+                                    "exact text size" 18
+                                    "text valign" center
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

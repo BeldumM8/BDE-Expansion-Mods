@@ -1,0 +1,23 @@
+{
+    "Version": 1,
+    "EnableVehicleLocks": true,
+    "LockMarketVehiclesOnPurchase": true,
+    "LockClaimedVehicles": true,
+    "LockMigratedVehicles": true,
+    "AllowFreeClaiming": true,
+    "ClaimItemClassName": "",
+    "DeleteClaimItemOnSuccess": true,
+    "AutoMigrateExpansionOwners": true,
+    "DeleteLoadedExpansionKeysOnAutoMigration": true,
+    "AllowExpansionKeyClaim": true,
+    "DeleteExpansionKeyOnClaim": true,
+    "DeleteMarketExpansionKey": true,
+    "EnableVehicleMarkers": true,
+    "MarkerDriverOnly": true,
+    "MarkerRequiresVehicleAccess": true,
+    "MarkerName": "My Vehicle",
+    "MarkerIcon": "Car",
+    "MarkerColor": -16711936,
+    "EnableAdminActions": true,
+    "DebugLogging": false
+}

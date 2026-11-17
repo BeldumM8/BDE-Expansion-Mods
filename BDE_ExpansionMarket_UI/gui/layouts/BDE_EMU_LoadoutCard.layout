@@ -1,0 +1,116 @@
+ButtonWidgetClass Select
+{
+    position 0 0
+    size 0.98 112
+    hexactpos 0
+    vexactpos 1
+    hexactsize 0
+    vexactsize 1
+    visible 1
+    clipchildren 1
+    style Default
+    color 0.035 0.10 0.15 1
+    {
+        TextWidgetClass CardName
+        {
+            position 0.24 0.04
+            size 0.73 0.25
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            visible 1
+            clipchildren 1
+            ignorepointer 1
+            color 0.85 0.91 0.95 1
+            text ""
+            font "gui/fonts/Metron18"
+            "text valign" center
+            "exact text" 1
+            "exact text size" 18
+        }
+        ItemPreviewWidgetClass CardPreview
+        {
+            position 8 4
+            size 112 104
+            hexactpos 1
+            vexactpos 1
+            hexactsize 1
+            vexactsize 1
+            visible 1
+            clipchildren 1
+            ignorepointer 1
+            "force flip enable" 1
+        }
+        ImageWidgetClass CardGhost
+        {
+            position 8 4
+            size 112 104
+            hexactpos 1
+            vexactpos 1
+            hexactsize 1
+            vexactsize 1
+            visible 0
+            ignorepointer 1
+            mode blend
+            "src alpha" 1
+            "stretch mode" stretch_w_h
+            imageTexture "set:dayz_inventory image:missing"
+            clipchildren 1
+        }
+        TextWidgetClass CardPrice
+        {
+            position 0.24 0.33
+            size 0.73 0.19
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            visible 1
+            clipchildren 1
+            ignorepointer 1
+            color 0.55 0.87 0.71 1
+            text ""
+            font "gui/fonts/Metron18"
+            "text valign" center
+            "exact text" 1
+            "exact text size" 18
+        }
+        TextWidgetClass CardStock
+        {
+            position 0.24 0.56
+            size 0.73 0.18
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            visible 1
+            clipchildren 1
+            ignorepointer 1
+            color 0.85 0.91 0.95 1
+            text ""
+            font "gui/fonts/Metron16"
+            "text valign" center
+            "exact text" 1
+            "exact text size" 16
+        }
+        TextWidgetClass CardState
+        {
+            position 0.24 0.77
+            size 0.73 0.19
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            visible 1
+            clipchildren 1
+            ignorepointer 1
+            color 0.88 0.66 0.43 1
+            text ""
+            font "gui/fonts/Metron16"
+            "text valign" center
+            "exact text" 1
+            "exact text size" 16
+        }
+    }
+}

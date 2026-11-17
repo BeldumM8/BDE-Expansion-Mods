@@ -1,0 +1,732 @@
+FrameWidgetClass Root
+{
+    position 0 0
+    size 1 1
+    hexactpos 0
+    vexactpos 0
+    hexactsize 0
+    vexactsize 0
+    visible 1
+    clipchildren 1
+    {
+        PanelWidgetClass Main
+        {
+            position 0.025 0.04
+            size 0.95 0.92
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            visible 1
+            clipchildren 1
+            style rover_sim_colorable
+            color 0.008 0.027 0.047 1
+            {
+                TextWidgetClass Title
+                {
+                    position 0.025 0.025
+                    size 0.75 0.045
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    visible 1
+                    clipchildren 1
+                    ignorepointer 1
+                    text "BDE / LOADOUT MANAGER"
+                    font "gui/fonts/Metron18"
+                    "exact text" 1
+                    "exact text size" 26
+                }
+                ButtonWidgetClass Close
+                {
+                    position 0.88 0.02
+                    size 0.095 0.05
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    visible 1
+                    clipchildren 1
+                    style Default
+                    color 0.035 0.10 0.15 1
+                    {
+                        TextWidgetClass CloseLabel
+                        {
+                            position 0.04 0.15
+                            size 0.92 0.70
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            visible 1
+                            clipchildren 1
+                            ignorepointer 1
+                            text "CLOSE"
+                            font "gui/fonts/Metron18"
+                            "exact text" 1
+                            "exact text size" 18
+                        }
+                    }
+                }
+                ScrollWidgetClass SlotsScroll
+                {
+                    position 0.025 0.09
+                    size 0.60 0.095
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    visible 1
+                    clipchildren 1
+                    "Scrollbar H" 1
+                    "Scrollbar V" 0
+                    {
+                        FrameWidgetClass SlotsContent
+                        {
+                            position 0 0
+                            size 1140 76
+                            hexactpos 1
+                            vexactpos 1
+                            hexactsize 1
+                            vexactsize 1
+                            visible 1
+                            clipchildren 1
+                        }
+                    }
+                }
+                ButtonWidgetClass BackLevel
+                {
+                    position 0.025 0.20
+                    size 0.035 0.065
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    visible 1
+                    clipchildren 1
+                    style Default
+                    color 0.035 0.10 0.15 1
+                    {
+                        TextWidgetClass BackLevelLabel
+                        {
+                            position 0.04 0.15
+                            size 0.92 0.70
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            visible 1
+                            clipchildren 1
+                            ignorepointer 1
+                            text "<"
+                            font "gui/fonts/Metron18"
+                            "exact text" 1
+                            "exact text size" 18
+                        }
+                    }
+                }
+                ScrollWidgetClass ChildSlotsScroll
+                {
+                    position 0.07 0.19
+                    size 0.565 0.095
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    visible 1
+                    clipchildren 1
+                    "Scrollbar H" 1
+                    "Scrollbar V" 0
+                    {
+                        FrameWidgetClass ChildSlotsContent
+                        {
+                            position 0 0
+                            size 1140 76
+                            hexactpos 1
+                            vexactpos 1
+                            hexactsize 1
+                            vexactsize 1
+                            visible 1
+                            clipchildren 1
+                        }
+                    }
+                }
+                FrameWidgetClass OffersPanel
+                {
+                    position 0.025 0.31
+                    size 0.335 0.61
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    visible 1
+                    clipchildren 1
+                    {
+                        EditBoxWidgetClass Search
+                        {
+                            position 0 0
+                            size 0.76 0.055
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            visible 1
+                            clipchildren 1
+                            text ""
+                            font "gui/fonts/Metron18"
+                        }
+                        TextWidgetClass SearchHint
+                        {
+                            position 0.02 0.01
+                            size 0.65 0.04
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            visible 1
+                            clipchildren 1
+                            ignorepointer 1
+                            text "Search"
+                            font "gui/fonts/Metron18"
+                            "exact text" 1
+                            "exact text size" 18
+                        }
+                        ButtonWidgetClass Refresh
+                        {
+                            position 0.78 0
+                            size 0.22 0.055
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            visible 1
+                            clipchildren 1
+                            style Default
+                            color 0.035 0.10 0.15 1
+                            {
+                                TextWidgetClass RefreshLabel
+                                {
+                                    position 0.04 0.15
+                                    size 0.92 0.70
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    visible 1
+                                    clipchildren 1
+                                    ignorepointer 1
+                                    text "REFRESH"
+                                    font "gui/fonts/Metron18"
+                                    "exact text" 1
+                                    "exact text size" 18
+                                }
+                            }
+                        }
+                        XComboBoxWidgetClass GroupPicker
+                        {
+                            position 0 0.07
+                            size 1 0.065
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            visible 1
+                            clipchildren 1
+                            font "gui/fonts/Metron18"
+                        }
+                        ScrollWidgetClass OffersScroll
+                        {
+                            position 0 0.15
+                            size 1 0.85
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            visible 1
+                            clipchildren 1
+                            "Scrollbar V" 1
+                            {
+                                FrameWidgetClass OffersContent
+                                {
+                                    position 0 0
+                                    size 1 1
+                                    hexactpos 0
+                                    vexactpos 1
+                                    hexactsize 0
+                                    vexactsize 1
+                                    visible 1
+                                    clipchildren 1
+                                }
+                            }
+                        }
+                    }
+                }
+                FrameWidgetClass PreviewPanel
+                {
+                    position 0.375 0.31
+                    size 0.335 0.61
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    visible 1
+                    clipchildren 1
+                    {
+                        FrameWidgetClass PreviewViewport
+                        {
+                            position 0 0
+                            size 1 0.91
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            clipchildren 1
+                            {
+                                PlayerPreviewWidgetClass PlayerPreview
+                                {
+                                    position 0 0
+                                    size 1 1
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    visible 1
+                                    clipchildren 1
+                                }
+                                ItemPreviewWidgetClass ItemPreview
+                                {
+                                    position 0 0
+                                    size 1 1
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    visible 1
+                                    clipchildren 1
+                                    "force flip enable" 1
+                                }
+                            }
+                        }
+                        XComboBoxWidgetClass PreviewMode
+                        {
+                            position 0.05 0.93
+                            size 0.9 0.065
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            visible 1
+                            clipchildren 1
+                            font "gui/fonts/Metron18"
+                        }
+                    }
+                }
+                PanelWidgetClass DetailsPanel
+                {
+                    position 0.73 0.31
+                    size 0.245 0.61
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    visible 1
+                    clipchildren 1
+                    style rover_sim_colorable
+                    color 0.01 0.03 0.05 1
+                    {
+                        MultilineTextWidgetClass Description
+                        {
+                            wrap 1
+                            clipchildren 1
+                            position 0.03 0.02
+                            size 0.94 0.72
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            visible 1
+                            text ""
+                            font "gui/fonts/Metron18"
+                            "exact text" 1
+                            "exact text size" 18
+                        }
+                        ButtonWidgetClass Buy
+                        {
+                            position 0.02 0.89
+                            size 0.96 0.10
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            visible 1
+                            clipchildren 1
+                            style Default
+                            color 0.035 0.10 0.15 1
+                            {
+                                TextWidgetClass BuyLabel
+                                {
+                                    position 0.04 0.15
+                                    size 0.92 0.70
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    visible 1
+                                    clipchildren 1
+                                    ignorepointer 1
+                                    text "SELECT AN ITEM"
+                                    font "gui/fonts/Metron18"
+                                    "exact text" 1
+                                    "exact text size" 18
+                                }
+                            }
+                        }
+                    }
+                }
+                TextWidgetClass Status
+                {
+                    position 0.025 0.947
+                    size 0.95 0.04
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    visible 1
+                    clipchildren 1
+                    ignorepointer 1
+                    text ""
+                    font "gui/fonts/Metron18"
+                    "exact text" 1
+                    "exact text size" 16
+                }
+                TextWidgetClass Path
+                {
+                    position 0 0
+                    size 0 0
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    visible 1
+                    clipchildren 1
+                    text ""
+                    ignorepointer 1
+                    "exact text" 1
+                    "exact text size" 16
+                    "text valign" center
+                }
+                TextWidgetClass PreviewTitle
+                {
+                    position 0 0
+                    size 0 0
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    visible 1
+                    clipchildren 1
+                    text ""
+                    ignorepointer 1
+                    "exact text" 1
+                    "exact text size" 16
+                    "text valign" center
+                }
+                XComboBoxWidgetClass SavedLoadouts
+                {
+                    position 0.64 0.10
+                    size 0.145 0.05
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    visible 1
+                    clipchildren 1
+                    font "gui/fonts/Metron18"
+                }
+                EditBoxWidgetClass LoadoutName
+                {
+                    position 0.795 0.108
+                    size 0.18 0.03355
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    visible 1
+                    clipchildren 1
+                    font "gui/fonts/Metron18"
+                    "exact text" 1
+                    "exact text size" 18
+                    text ""
+                }
+                ButtonWidgetClass ApplyLoadout
+                {
+                    position 0.64 0.16
+                    size 0.068 0.045
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    visible 1
+                    clipchildren 1
+                    style Default
+                    color 0.035 0.10 0.15 1
+                    {
+                        TextWidgetClass ApplyLoadoutLabel
+                        {
+                            position 0.04 0.15
+                            size 0.92 0.70
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            visible 1
+                            clipchildren 1
+                            ignorepointer 1
+                            font "gui/fonts/Metron18"
+                            text "APPLY"
+                            "exact text" 1
+                            "exact text size" 16
+                            "text valign" center
+                        }
+                    }
+                }
+                ButtonWidgetClass DeleteLoadout
+                {
+                    position 0.717 0.16
+                    size 0.068 0.045
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    visible 1
+                    clipchildren 1
+                    style Default
+                    color 0.035 0.10 0.15 1
+                    {
+                        TextWidgetClass DeleteLoadoutLabel
+                        {
+                            position 0.04 0.15
+                            size 0.92 0.70
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            visible 1
+                            clipchildren 1
+                            ignorepointer 1
+                            font "gui/fonts/Metron18"
+                            text "DELETE"
+                            "exact text" 1
+                            "exact text size" 16
+                            "text valign" center
+                        }
+                    }
+                }
+                ButtonWidgetClass SaveLoadout
+                {
+                    position 0.845 0.16
+                    size 0.08 0.045
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    visible 1
+                    clipchildren 1
+                    style Default
+                    color 0.035 0.10 0.15 1
+                    {
+                        TextWidgetClass SaveLoadoutLabel
+                        {
+                            position 0.04 0.15
+                            size 0.92 0.70
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            visible 1
+                            clipchildren 1
+                            ignorepointer 1
+                            font "gui/fonts/Metron18"
+                            text "SAVE"
+                            "exact text" 1
+                            "exact text size" 16
+                            "text valign" center
+                        }
+                    }
+                }
+                TextWidgetClass SlotTooltip
+                {
+                    position 0.025 0.282
+                    size 0.68 0.025
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    visible 1
+                    clipchildren 1
+                    font "gui/fonts/Metron18"
+                    text ""
+                    "exact text" 1
+                    "exact text size" 16
+                    "text valign" center
+                }
+                PanelWidgetClass ItemPresetPopup
+                {
+                    priority 100
+                    position 0.39 0.28
+                    size 0.30 0.30
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    visible 0
+                    clipchildren 1
+                    style rover_sim_colorable
+                    color 0.02 0.07 0.11 1
+                    {
+                        TextWidgetClass ItemPresetTitle
+                        {
+                            position 0.03 0.02
+                            size 0.85 0.12
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            visible 1
+                            clipchildren 1
+                            font "gui/fonts/Metron18"
+                            text "ITEM CONFIGURATION"
+                            "exact text" 1
+                            "exact text size" 16
+                            "text valign" center
+                        }
+                        XComboBoxWidgetClass SavedItems
+                        {
+                            position 0.03 0.22
+                            size 0.94 0.18
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            visible 1
+                            clipchildren 1
+                            font "gui/fonts/Metron18"
+                        }
+                        EditBoxWidgetClass ItemPresetName
+                        {
+                            position 0.03 0.44
+                            size 0.94 0.16
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            visible 1
+                            clipchildren 1
+                            font "gui/fonts/Metron18"
+                            "exact text" 1
+                            "exact text size" 18
+                            text ""
+                        }
+                        ButtonWidgetClass DeleteItemPreset
+                        {
+                            position 0.03 0.70
+                            size 0.29 0.18
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            visible 1
+                            clipchildren 1
+                            style Default
+                            color 0.035 0.10 0.15 1
+                            {
+                                TextWidgetClass DeleteItemPresetLabel
+                                {
+                                    position 0.04 0.15
+                                    size 0.92 0.70
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    visible 1
+                                    clipchildren 1
+                                    ignorepointer 1
+                                    font "gui/fonts/Metron18"
+                                    text "DELETE"
+                                    "exact text" 1
+                                    "exact text size" 16
+                                    "text valign" center
+                                }
+                            }
+                        }
+                        ButtonWidgetClass SaveItemPreset
+                        {
+                            position 0.35 0.70
+                            size 0.29 0.18
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            visible 1
+                            clipchildren 1
+                            style Default
+                            color 0.035 0.10 0.15 1
+                            {
+                                TextWidgetClass SaveItemPresetLabel
+                                {
+                                    position 0.04 0.15
+                                    size 0.92 0.70
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    visible 1
+                                    clipchildren 1
+                                    ignorepointer 1
+                                    font "gui/fonts/Metron18"
+                                    text "SAVE"
+                                    "exact text" 1
+                                    "exact text size" 16
+                                    "text valign" center
+                                }
+                            }
+                        }
+                        ButtonWidgetClass CloseItemPreset
+                        {
+                            position 0.68 0.70
+                            size 0.29 0.18
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            visible 1
+                            clipchildren 1
+                            style Default
+                            color 0.035 0.10 0.15 1
+                            {
+                                TextWidgetClass CloseItemPresetLabel
+                                {
+                                    position 0.04 0.15
+                                    size 0.92 0.70
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    visible 1
+                                    clipchildren 1
+                                    ignorepointer 1
+                                    font "gui/fonts/Metron18"
+                                    text "CLOSE"
+                                    "exact text" 1
+                                    "exact text size" 16
+                                    "text valign" center
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

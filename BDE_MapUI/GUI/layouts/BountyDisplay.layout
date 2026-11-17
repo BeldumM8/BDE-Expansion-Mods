@@ -1,0 +1,441 @@
+FrameWidgetClass rootFrame
+{
+    position 0 0
+    size 1 1
+    hexactpos 0
+    vexactpos 0
+    hexactsize 0
+    vexactsize 0
+    {
+        PanelWidgetClass BDE_BountyRoot
+        {
+            visible 1
+            ignorepointer 0
+            position 0 0
+            size 1 1
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            style blank
+            {
+                PanelWidgetClass BDE_BountyLeftPanel
+                {
+                    ignorepointer 0
+                    color 0.08 0.08 0.08 0.85
+                    position 0.01 0.02
+                    size 0.34 0.96
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    style rover_sim_colorable
+                    {
+                        TextWidgetClass BDE_BountyListTitle
+                        {
+                            ignorepointer 1
+                            position 0.02 0.015
+                            size 0.96 0.055
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            text "BOUNTY BOARD"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 25
+                            "text halign" center
+                            "text valign" center
+                        }
+                        GridSpacerWidgetClass BDE_BountyFilterGrid
+                        {
+                            ignorepointer 0
+                            position 0.02 0.085
+                            size 0.96 0.075
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            Padding 0
+                            Margin 4
+                            Columns 3
+                            Rows 1
+                            {
+                                ButtonWidgetClass BDE_BountyFilterActive
+                                {
+                                    color 0.2 0.2 0.2 1
+                                    size 1 1
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    style DayZDefaultButtonNoBorder
+                                    text "Bounties"
+                                    text_proportion 0.45
+                                    font "gui/fonts/sdf_MetronBook24"
+                                }
+                                ButtonWidgetClass BDE_BountyFilterOnline
+                                {
+                                    color 0.2 0.2 0.2 1
+                                    size 1 1
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    style DayZDefaultButtonNoBorder
+                                    text "Online"
+                                    text_proportion 0.45
+                                    font "gui/fonts/sdf_MetronBook24"
+                                }
+                                ButtonWidgetClass BDE_BountyFilterAll
+                                {
+                                    color 0.6 0.6 0.6 1
+                                    size 1 1
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    style DayZDefaultButtonNoBorder
+                                    text "All Players"
+                                    text_proportion 0.45
+                                    font "gui/fonts/sdf_MetronBook24"
+                                }
+                            }
+                        }
+                        TextListboxWidgetClass BDE_BountyPlayerList
+                        {
+                            ignorepointer 0
+                            color 0.03 0.03 0.03 0.9
+                            position 0.02 0.175
+                            size 0.96 0.755
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            style Default
+                            "title visible" 0
+                            colums "Status;12;Bounty;30;Player;58;"
+                            lines 30
+                            "highlight row" 1
+                            font "gui/fonts/sdf_MetronLight24"
+                        }
+                        TextWidgetClass BDE_BountyStatusText
+                        {
+                            ignorepointer 1
+                            position 0.02 0.935
+                            size 0.96 0.05
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            text "Status"
+                            font "gui/fonts/sdf_MetronLight24"
+                            "exact text" 1
+                            "exact text size" 16
+                            "text valign" center
+                        }
+                    }
+                }
+                PanelWidgetClass BDE_BountyRightPanel
+                {
+                    ignorepointer 0
+                    color 0.08 0.08 0.08 0.85
+                    position 0.36 0.02
+                    size 0.63 0.96
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    style rover_sim_colorable
+                    {
+                        PanelWidgetClass BDE_BountyPreviewPanel
+                        {
+                            ignorepointer 0
+                            color 0.02 0.02 0.02 0.8
+                            position 0.02 0.02
+                            size 0.37 0.96
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            style blank
+                            {
+                                PlayerPreviewWidgetClass BDE_BountyPlayerPreview
+                                {
+                                    priority 2
+                                    visible 0
+                                    clipchildren 0
+                                    ignorepointer 0
+                                    position 0.05 0.02
+                                    size 0.9 0.94
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    draggable 0
+                                }
+                                TextWidgetClass BDE_BountyPreviewPlaceholder
+                                {
+                                    visible 1
+                                    ignorepointer 1
+                                    position 0.04 0.35
+                                    size 0.92 0.3
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    text "Character preview"
+                                    font "gui/fonts/sdf_MetronLight24"
+                                    "exact text" 1
+                                    "exact text size" 18
+                                    "text halign" center
+                                    "text valign" center
+                                    wrap 1
+                                }
+                            }
+                        }
+                        PanelWidgetClass BDE_BountyDetailsPanel
+                        {
+                            ignorepointer 1
+                            position 0.41 0.02
+                            size 0.57 0.53
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            style blank
+                            {
+                                TextWidgetClass BDE_BountySelectedNameLabel
+                                {
+                                    ignorepointer 1
+                                    position 0 0
+                                    size 0.32 0.09
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    text "Player:"
+                                    font "gui/fonts/sdf_MetronBook24"
+                                    "exact text" 1
+                                    "exact text size" 20
+                                    "text valign" center
+                                }
+                                TextWidgetClass BDE_BountySelectedName
+                                {
+                                    ignorepointer 1
+                                    position 0.32 0
+                                    size 0.68 0.09
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    text "No player selected"
+                                    font "gui/fonts/sdf_MetronBook24"
+                                    style Bold
+                                    "exact text" 1
+                                    "exact text size" 20
+                                    "text valign" center
+                                }
+                                TextWidgetClass BDE_BountySelectedStatusLabel
+                                {
+                                    ignorepointer 1
+                                    position 0 0.105
+                                    size 0.32 0.08
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    text "Status:"
+                                    font "gui/fonts/sdf_MetronLight24"
+                                    "exact text" 1
+                                    "exact text size" 18
+                                    "text valign" center
+                                }
+                                TextWidgetClass BDE_BountySelectedStatus
+                                {
+                                    ignorepointer 1
+                                    position 0.32 0.105
+                                    size 0.68 0.08
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    text "-"
+                                    font "gui/fonts/sdf_MetronLight24"
+                                    "exact text" 1
+                                    "exact text size" 18
+                                    "text valign" center
+                                }
+                                TextWidgetClass BDE_BountySelectedAmountLabel
+                                {
+                                    ignorepointer 1
+                                    position 0 0.205
+                                    size 0.32 0.08
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    text "Bounty:"
+                                    font "gui/fonts/sdf_MetronLight24"
+                                    "exact text" 1
+                                    "exact text size" 18
+                                    "text valign" center
+                                }
+                                TextWidgetClass BDE_BountySelectedAmount
+                                {
+                                    ignorepointer 1
+                                    position 0.32 0.205
+                                    size 0.68 0.08
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    text "$0"
+                                    font "gui/fonts/sdf_MetronLight24"
+                                    "exact text" 1
+                                    "exact text size" 18
+                                    "text valign" center
+                                }
+                                TextWidgetClass BDE_BountySelectedLocationLabel
+                                {
+                                    ignorepointer 1
+                                    position 0 0.305
+                                    size 0.32 0.08
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    text "Location:"
+                                    font "gui/fonts/sdf_MetronLight24"
+                                    "exact text" 1
+                                    "exact text size" 18
+                                    "text valign" center
+                                }
+                                TextWidgetClass BDE_BountySelectedLocation
+                                {
+                                    ignorepointer 1
+                                    position 0.32 0.305
+                                    size 0.68 0.16
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    text "Unknown"
+                                    font "gui/fonts/sdf_MetronLight24"
+                                    "exact text" 1
+                                    "exact text size" 17
+                                    wrap 1
+                                }
+                                GridSpacerWidgetClass BDE_BountyActionGrid
+                                {
+                                    ignorepointer 0
+                                    position 0 0.48
+                                    size 1 0.16
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    Padding 0
+                                    Margin 6
+                                    Columns 3
+                                    Rows 1
+                                    {
+                                        EditBoxWidgetClass BDE_BountyAmountEdit
+                                        {
+                                            position 0 0
+                                            size 1 1
+                                            hexactpos 0
+                                            vexactpos 0
+                                            hexactsize 0
+                                            vexactsize 0
+                                            style Editor
+                                            text "50000"
+                                            "limit visible" 1
+                                            "Use default text" 0
+                                            "exact text" 1
+                                            font "gui/fonts/MetronBook-Bold22"
+                                        }
+                                        ButtonWidgetClass BDE_BountyAddButton
+                                        {
+                                            color 0.384 0.082 0.11 1
+                                            size 1 1
+                                            hexactpos 0
+                                            vexactpos 0
+                                            hexactsize 0
+                                            vexactsize 0
+                                            style DayZDefaultButton
+                                            text "Add Bounty"
+                                            text_proportion 0.29
+                                            font "gui/fonts/sdf_MetronBook24"
+                                        }
+                                        ButtonWidgetClass BDE_BountyRemoveButton
+                                        {
+                                            color 0.25 0.25 0.25 1
+                                            size 1 1
+                                            hexactpos 0
+                                            vexactpos 0
+                                            hexactsize 0
+                                            vexactsize 0
+                                            style DayZDefaultButton
+                                            text "Remove Mine"
+                                            text_proportion 0.29
+                                            font "gui/fonts/sdf_MetronBook24"
+                                        }
+                                    }
+                                }
+                                MultilineTextWidgetClass BDE_BountyContributorsText
+                                {
+                                    ignorepointer 1
+                                    position 0 0.67
+                                    size 1 0.3
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    text "Placed by: None"
+                                    font "gui/fonts/sdf_MetronLight24"
+                                    "text offset" 4 4
+                                    "exact text" 1
+                                    "exact text size" 16
+                                    wrap 1
+                                }
+                            }
+                        }
+                        PanelWidgetClass BDE_BountyGearPanel
+                        {
+                            visible 0
+                            ignorepointer 1
+                            color 0.02 0.02 0.02 0.8
+                            position 0.02 0.57
+                            size 0.96 0.41
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            style blank
+                            {
+                                MultilineTextWidgetClass BDE_BountyGearText
+                                {
+                                    ignorepointer 1
+                                    position 0.015 0.02
+                                    size 0.97 0.96
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    text "Last gear snapshot: None"
+                                    font "gui/fonts/sdf_MetronLight24"
+                                    "text offset" 4 4
+                                    "exact text" 1
+                                    "exact text size" 17
+                                    "size to text v" 0
+                                    wrap 1
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

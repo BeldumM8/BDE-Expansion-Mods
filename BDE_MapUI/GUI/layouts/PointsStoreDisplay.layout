@@ -1,0 +1,312 @@
+FrameWidgetClass rootFrame
+{
+    position 0 0
+    size 1 1
+    hexactpos 0
+    vexactpos 0
+    hexactsize 0
+    vexactsize 0
+    {
+        PanelWidgetClass BDE_PointsRoot
+        {
+            visible 1
+            ignorepointer 0
+            position 0 0
+            size 1 1
+            style blank
+            {
+                PanelWidgetClass BDE_PointsTasksPanel
+                {
+                    ignorepointer 0
+                    color 0.035 0.035 0.035 0.9
+                    position 0.01 0.02
+                    size 0.36 0.96
+                    style rover_sim_colorable
+                    {
+                        PanelWidgetClass BDE_PointsTasksHeaderBack
+                        {
+                            ignorepointer 1
+                            color 0.2549 0.2549 0.2549 1
+                            position 0.02 0.015
+                            size 0.96 0.06
+                            style rover_sim_colorable
+                        }
+                        TextWidgetClass BDE_PointsTasksHeader
+                        {
+                            ignorepointer 1
+                            position 0.02 0.015
+                            size 0.96 0.06
+                            text "TASKS"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 24
+                            "text halign" center
+                            "text valign" center
+                        }
+                        GridSpacerWidgetClass BDE_PointsFilterGrid
+                        {
+                            ignorepointer 0
+                            position 0.02 0.09
+                            size 0.96 0.075
+                            Columns 2
+                            Rows 1
+                            Padding 0
+                            Margin 4
+                            {
+                                ButtonWidgetClass BDE_PointsDailyButton
+                                {
+                                    color 0.6 0.6 0.6 1
+                                    size 1 1
+                                    style DayZDefaultButtonNoBorder
+                                    text "Daily"
+                                    text_proportion 0.45
+                                    font "gui/fonts/sdf_MetronBook24"
+                                }
+                                ButtonWidgetClass BDE_PointsWeeklyButton
+                                {
+                                    color 0.2 0.2 0.2 1
+                                    size 1 1
+                                    style DayZDefaultButtonNoBorder
+                                    text "Weekly"
+                                    text_proportion 0.45
+                                    font "gui/fonts/sdf_MetronBook24"
+                                }
+                            }
+                        }
+                        TextListboxWidgetClass BDE_PointsTaskList
+                        {
+                            ignorepointer 0
+                            color 0.03 0.03 0.03 0.9
+                            position 0.02 0.18
+                            size 0.96 0.56
+                            style Default
+                            "title visible" 0
+                            colums "Task;52;Progress;26;Reward;22;"
+                            lines 22
+                            "highlight row" 1
+                            font "gui/fonts/sdf_MetronLight24"
+                        }
+                        MultilineTextWidgetClass BDE_PointsTaskDescription
+                        {
+                            ignorepointer 1
+                            color 1 1 1 1
+                            position 0.02 0.755
+                            size 0.96 0.155
+                            text "Select a task to see what to do."
+                            font "gui/fonts/sdf_MetronLight24"
+                            "exact text" 1
+                            "exact text size" 16
+                            wrap 1
+                        }
+                        TextWidgetClass BDE_PointsTaskStatus
+                        {
+                            ignorepointer 1
+                            position 0.02 0.93
+                            size 0.96 0.05
+                            text "Tasks loaded"
+                            font "gui/fonts/sdf_MetronLight24"
+                            "exact text" 1
+                            "exact text size" 16
+                            "text valign" center
+                        }
+                    }
+                }
+                PanelWidgetClass BDE_PointsStorePanel
+                {
+                    ignorepointer 0
+                    color 0.035 0.035 0.035 0.9
+                    position 0.385 0.02
+                    size 0.35 0.96
+                    style rover_sim_colorable
+                    {
+                        PanelWidgetClass BDE_PointsStoreHeaderBack
+                        {
+                            ignorepointer 1
+                            color 0.2549 0.2549 0.2549 1
+                            position 0.02 0.015
+                            size 0.96 0.06
+                            style rover_sim_colorable
+                        }
+                        TextWidgetClass BDE_PointsStoreHeader
+                        {
+                            ignorepointer 1
+                            position 0.02 0.015
+                            size 0.96 0.06
+                            text "POINTS STORE"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 24
+                            "text halign" center
+                            "text valign" center
+                        }
+                        TextListboxWidgetClass BDE_PointsStoreList
+                        {
+                            ignorepointer 0
+                            color 0.03 0.03 0.03 0.9
+                            position 0.02 0.09
+                            size 0.96 0.83
+                            style Default
+                            "title visible" 0
+                            colums "Points;24;Item;76;"
+                            lines 32
+                            "highlight row" 1
+                            font "gui/fonts/sdf_MetronLight24"
+                        }
+                        TextWidgetClass BDE_PointsStoreStatus
+                        {
+                            ignorepointer 1
+                            position 0.02 0.93
+                            size 0.96 0.05
+                            text "Select an item"
+                            font "gui/fonts/sdf_MetronLight24"
+                            "exact text" 1
+                            "exact text size" 16
+                            "text valign" center
+                        }
+                    }
+                }
+                PanelWidgetClass BDE_PointsDetailsPanel
+                {
+                    ignorepointer 0
+                    color 0.035 0.035 0.035 0.9
+                    position 0.75 0.02
+                    size 0.24 0.96
+                    style rover_sim_colorable
+                    {
+                        PanelWidgetClass BDE_PointsInfoHeaderBack
+                        {
+                            ignorepointer 1
+                            color 0.2549 0.2549 0.2549 1
+                            position 0.04 0.015
+                            size 0.92 0.06
+                            style rover_sim_colorable
+                        }
+                        TextWidgetClass BDE_PointsInfoHeader
+                        {
+                            ignorepointer 1
+                            position 0.04 0.015
+                            size 0.92 0.06
+                            text "BALANCE"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 24
+                            "text halign" center
+                            "text valign" center
+                        }
+                        TextWidgetClass BDE_PointsBalanceText
+                        {
+                            ignorepointer 1
+                            position 0.06 0.105
+                            size 0.88 0.08
+                            text "0 Points"
+                            font "gui/fonts/sdf_MetronBook24"
+                            style Bold
+                            "exact text" 1
+                            "exact text size" 28
+                            "text halign" center
+                            "text valign" center
+                        }
+                        TextWidgetClass BDE_PointsVIPText
+                        {
+                            ignorepointer 1
+                            position 0.06 0.19
+                            size 0.88 0.05
+                            text "Standard Rewards"
+                            font "gui/fonts/sdf_MetronLight24"
+                            "exact text" 1
+                            "exact text size" 17
+                            "text halign" center
+                            "text valign" center
+                        }
+                        ButtonWidgetClass BDE_PointsGetVIPButton
+                        {
+                            color 0.384 0.082 0.11 1
+                            position 0.06 0.245
+                            size 0.88 0.055
+                            style DayZDefaultButtonNoBorder
+                            text "Get VIP"
+                            text_proportion 0.45
+                            font "gui/fonts/sdf_MetronBook24"
+                        }
+                        PanelWidgetClass BDE_PointsSelectedHeaderBack
+                        {
+                            ignorepointer 1
+                            color 0.2549 0.2549 0.2549 1
+                            position 0.04 0.325
+                            size 0.92 0.06
+                            style rover_sim_colorable
+                        }
+                        TextWidgetClass BDE_PointsSelectedHeader
+                        {
+                            ignorepointer 1
+                            position 0.04 0.325
+                            size 0.92 0.06
+                            text "SELECTED ITEM"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 20
+                            "text halign" center
+                            "text valign" center
+                        }
+                        ItemPreviewWidgetClass BDE_PointsItemPreview
+                        {
+                            priority 2
+                            ignorepointer 0
+                            keepsafezone 0
+                            position 0.09 0.40
+                            size 0.82 0.20
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            draggable 0
+                        }
+                        MultilineTextWidgetClass BDE_PointsSelectedItemText
+                        {
+                            ignorepointer 1
+                            position 0.06 0.61
+                            size 0.88 0.13
+                            text "Select a store item."
+                            font "gui/fonts/sdf_MetronLight24"
+                            "exact text" 1
+                            "exact text size" 17
+                            wrap 1
+                        }
+                        ButtonWidgetClass BDE_PointsPurchaseButton
+                        {
+                            color 0.384 0.082 0.11 1
+                            position 0.06 0.78
+                            size 0.88 0.075
+                            style DayZDefaultButtonNoBorder
+                            text "Purchase"
+                            text_proportion 0.45
+                            font "gui/fonts/sdf_MetronBook24"
+                        }
+                        ButtonWidgetClass BDE_PointsRefreshButton
+                        {
+                            color 0.2 0.2 0.2 1
+                            position 0.06 0.87
+                            size 0.88 0.065
+                            style DayZDefaultButtonNoBorder
+                            text "Refresh"
+                            text_proportion 0.45
+                            font "gui/fonts/sdf_MetronBook24"
+                        }
+                        TextWidgetClass BDE_PointsActionStatus
+                        {
+                            ignorepointer 1
+                            position 0.06 0.94
+                            size 0.88 0.04
+                            text ""
+                            font "gui/fonts/sdf_MetronLight24"
+                            "exact text" 1
+                            "exact text size" 16
+                            "text valign" center
+                            wrap 1
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

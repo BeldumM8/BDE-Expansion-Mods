@@ -1,0 +1,36 @@
+ButtonWidgetClass btn_bdeegps_route_mode {
+ position 0 0
+ size 1 25
+ valign top_ref
+ hexactpos 1
+ vexactpos 0
+ hexactsize 0
+ vexactsize 1
+ color 0.3 0.4 0.5 1
+ {
+  ImageWidgetClass img_btn_bdeegps_route_mode_bg {
+   ignorepointer 1
+   color 0.3 0.4 0.5 1
+   position 0 0
+   size 1 1
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+  }
+  TextWidgetClass btn_bdeegps_route_mode_text {
+   ignorepointer 1
+   color 1 1 1 1
+   position 0 0
+   size 1 1
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   "text halign" center
+   "text valign" center
+   font "gui/fonts/metron"
+   text "MODE: DRIVABLE"
+  }
+ }
+}

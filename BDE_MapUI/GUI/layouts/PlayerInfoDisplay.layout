@@ -1,0 +1,728 @@
+FrameWidgetClass BDE_PlayerRoot
+{
+    visible 1
+    position 0 0
+    size 1 1
+    hexactpos 0
+    vexactpos 0
+    hexactsize 0
+    vexactsize 0
+    ignorepointer 1
+    {
+        PanelWidgetClass BDE_CharacterCard
+        {
+            visible 1
+            position 0.01 0.01
+            size 0.29 0.98
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            ignorepointer 1
+            style rover_sim_colorable
+            color 0.025 0.045 0.06 0.96
+            {
+                TextWidgetClass CharacterHeading
+                {
+                    visible 1
+                    position 0.05 0.02
+                    size 0.9 0.045
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "YOUR SURVIVOR"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 22
+                    color 0.78 0.87 0.94 1
+                }
+                PlayerPreviewWidgetClass PlayerPreview
+                {
+                    visible 1
+                    position 0.08 0.09
+                    size 0.84 0.6
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 0
+                    clipchildren 0
+                    priority 2
+                }
+                TextWidgetClass HandsHeading
+                {
+                    visible 1
+                    position 0.05 0.71
+                    size 0.9 0.04
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "EQUIPPED IN HANDS"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 17
+                    color 0.78 0.87 0.94 1
+                }
+                ItemPreviewWidgetClass ItemPreview
+                {
+                    visible 1
+                    position 0.08 0.76
+                    size 0.84 0.15
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 0
+                    clipchildren 0
+                    priority 2
+                }
+                MultilineTextWidgetClass txt_itemhands
+                {
+                    visible 1
+                    position 0.05 0.92
+                    size 0.9 0.07
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "Nothing"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 16
+                    wrap 1
+                }
+            }
+        }
+        PanelWidgetClass BDE_Metric0
+        {
+            visible 1
+            position 0.32 0.01
+            size 0.215 0.17
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            ignorepointer 1
+            style rover_sim_colorable
+            color 0.025 0.045 0.06 0.96
+            {
+                TextWidgetClass MetricLabel0
+                {
+                    visible 1
+                    position 0.05 0.1
+                    size 0.9 0.28
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "TIME SURVIVED"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 16
+                    color 0.78 0.87 0.94 1
+                }
+                TextWidgetClass txt_survivalTime
+                {
+                    visible 1
+                    position 0.05 0.48
+                    size 0.9 0.4
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "--"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 26
+                    color 0.78 0.87 0.94 1
+                }
+            }
+        }
+        PanelWidgetClass BDE_Metric1
+        {
+            visible 1
+            position 0.545 0.01
+            size 0.215 0.17
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            ignorepointer 1
+            style rover_sim_colorable
+            color 0.025 0.045 0.06 0.96
+            {
+                TextWidgetClass MetricLabel1
+                {
+                    visible 1
+                    position 0.05 0.1
+                    size 0.9 0.28
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "DISTANCE TRAVELLED"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 16
+                    color 0.78 0.87 0.94 1
+                }
+                TextWidgetClass txt_distance
+                {
+                    visible 1
+                    position 0.05 0.48
+                    size 0.9 0.4
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "--"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 26
+                    color 0.78 0.87 0.94 1
+                }
+            }
+        }
+        PanelWidgetClass BDE_Metric2
+        {
+            visible 1
+            position 0.77 0.01
+            size 0.215 0.17
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            ignorepointer 1
+            style rover_sim_colorable
+            color 0.025 0.045 0.06 0.96
+            {
+                TextWidgetClass MetricLabel2
+                {
+                    visible 1
+                    position 0.05 0.1
+                    size 0.9 0.28
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "LONGEST SURVIVOR HIT"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 16
+                    color 0.78 0.87 0.94 1
+                }
+                TextWidgetClass txt_longestShot
+                {
+                    visible 1
+                    position 0.05 0.48
+                    size 0.9 0.4
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "--"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 26
+                    color 0.78 0.87 0.94 1
+                }
+            }
+        }
+        PanelWidgetClass BDE_ConditionCard
+        {
+            visible 1
+            position 0.32 0.2
+            size 0.665 0.29
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            ignorepointer 1
+            style rover_sim_colorable
+            color 0.025 0.045 0.06 0.96
+            {
+                TextWidgetClass ConditionHeading
+                {
+                    visible 1
+                    position 0.03 0.025
+                    size 0.93 0.12
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "CONDITION"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 21
+                    color 0.78 0.87 0.94 1
+                }
+                TextWidgetClass HealthBarLabel
+                {
+                    visible 1
+                    position 0.04 0.18
+                    size 0.44 0.11
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "HEALTH"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 16
+                    color 0.78 0.87 0.94 1
+                }
+                ProgressBarWidgetClass HealthBar
+                {
+                    visible 1
+                    position 0.04 0.32
+                    size 0.42 0.1
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    style Stamina
+                    vertical 0
+                    maximum 100
+                    color 0.2 0.7 0.45 1
+                }
+                TextWidgetClass BloodBarLabel
+                {
+                    visible 1
+                    position 0.53 0.18
+                    size 0.44 0.11
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "BLOOD"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 16
+                    color 0.78 0.87 0.94 1
+                }
+                ProgressBarWidgetClass BloodBar
+                {
+                    visible 1
+                    position 0.53 0.32
+                    size 0.42 0.1
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    style Stamina
+                    vertical 0
+                    maximum 5000
+                    color 0.8 0.2 0.2 1
+                }
+                TextWidgetClass StaminaBarLabel
+                {
+                    visible 1
+                    position 0.04 0.55
+                    size 0.44 0.11
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "STAMINA"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 16
+                    color 0.78 0.87 0.94 1
+                }
+                ProgressBarWidgetClass StaminaBar
+                {
+                    visible 1
+                    position 0.04 0.6900000000000001
+                    size 0.42 0.1
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    style Stamina
+                    vertical 0
+                    maximum 100
+                    color 0.15 0.65 0.8 1
+                }
+                TextWidgetClass ShockBarLabel
+                {
+                    visible 1
+                    position 0.53 0.55
+                    size 0.44 0.11
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "CONSCIOUSNESS"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 16
+                    color 0.78 0.87 0.94 1
+                }
+                ProgressBarWidgetClass ShockBar
+                {
+                    visible 1
+                    position 0.53 0.6900000000000001
+                    size 0.42 0.1
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    style Stamina
+                    vertical 0
+                    maximum 100
+                    color 0.8 0.7 0.3 1
+                }
+            }
+        }
+        PanelWidgetClass BDE_Details0
+        {
+            visible 1
+            position 0.32 0.51
+            size 0.325 0.48
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            ignorepointer 1
+            style rover_sim_colorable
+            color 0.025 0.045 0.06 0.96
+            {
+                TextWidgetClass DetailsHeading0
+                {
+                    visible 1
+                    position 0.05 0.04
+                    size 0.9 0.09
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "SURVIVOR RECORD"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 20
+                    color 0.78 0.87 0.94 1
+                }
+                TextWidgetClass txt_zKilledLabel
+                {
+                    visible 1
+                    position 0.05 0.2
+                    size 0.9 0.06
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "Infected killed"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 15
+                    color 0.78 0.87 0.94 1
+                }
+                TextWidgetClass txt_zKilled
+                {
+                    visible 1
+                    position 0.05 0.265
+                    size 0.9 0.09
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "--"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 21
+                    color 0.78 0.87 0.94 1
+                }
+                TextWidgetClass txt_pKilledLabel
+                {
+                    visible 1
+                    position 0.05 0.39
+                    size 0.9 0.06
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "Players killed"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 15
+                    color 0.78 0.87 0.94 1
+                }
+                TextWidgetClass txt_pKilled
+                {
+                    visible 1
+                    position 0.05 0.455
+                    size 0.9 0.09
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "--"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 21
+                    color 0.78 0.87 0.94 1
+                }
+                TextWidgetClass txt_diseaseLabel
+                {
+                    visible 1
+                    position 0.05 0.5800000000000001
+                    size 0.9 0.06
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "Disease"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 15
+                    color 0.78 0.87 0.94 1
+                }
+                TextWidgetClass txt_disease
+                {
+                    visible 1
+                    position 0.05 0.645
+                    size 0.9 0.09
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "--"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 21
+                    color 0.78 0.87 0.94 1
+                }
+                TextWidgetClass txt_sexLabel
+                {
+                    visible 1
+                    position 0.05 0.77
+                    size 0.9 0.06
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "Gender"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 15
+                    color 0.78 0.87 0.94 1
+                }
+                TextWidgetClass txt_sex
+                {
+                    visible 1
+                    position 0.05 0.835
+                    size 0.9 0.09
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "--"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 21
+                    color 0.78 0.87 0.94 1
+                }
+            }
+        }
+        PanelWidgetClass BDE_Details1
+        {
+            visible 1
+            position 0.66 0.51
+            size 0.325 0.48
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            ignorepointer 1
+            style rover_sim_colorable
+            color 0.025 0.045 0.06 0.96
+            {
+                TextWidgetClass DetailsHeading1
+                {
+                    visible 1
+                    position 0.05 0.04
+                    size 0.9 0.09
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "CHARACTER & WORLD"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 20
+                    color 0.78 0.87 0.94 1
+                }
+                TextWidgetClass txt_weightLabel
+                {
+                    visible 1
+                    position 0.05 0.2
+                    size 0.9 0.06
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "Carried weight"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 15
+                    color 0.78 0.87 0.94 1
+                }
+                TextWidgetClass txt_weight
+                {
+                    visible 1
+                    position 0.05 0.265
+                    size 0.9 0.09
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "--"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 21
+                    color 0.78 0.87 0.94 1
+                }
+                TextWidgetClass txt_bloodTypeLabel
+                {
+                    visible 1
+                    position 0.05 0.39
+                    size 0.9 0.06
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "Blood group"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 15
+                    color 0.78 0.87 0.94 1
+                }
+                TextWidgetClass txt_bloodType
+                {
+                    visible 1
+                    position 0.05 0.455
+                    size 0.9 0.09
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "--"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 21
+                    color 0.78 0.87 0.94 1
+                }
+                TextWidgetClass txt_serverTimeLabel
+                {
+                    visible 1
+                    position 0.05 0.5800000000000001
+                    size 0.9 0.06
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "World date / time"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 15
+                    color 0.78 0.87 0.94 1
+                }
+                TextWidgetClass txt_serverTime
+                {
+                    visible 1
+                    position 0.05 0.645
+                    size 0.9 0.09
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "--"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 21
+                    color 0.78 0.87 0.94 1
+                }
+                TextWidgetClass txt_serverUptimeLabel
+                {
+                    visible 1
+                    position 0.05 0.77
+                    size 0.9 0.06
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "Server uptime"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 15
+                    color 0.78 0.87 0.94 1
+                }
+                TextWidgetClass txt_serverUptime
+                {
+                    visible 1
+                    position 0.05 0.835
+                    size 0.9 0.09
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "--"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 21
+                    color 0.78 0.87 0.94 1
+                }
+            }
+        }
+        TextWidgetClass txt_playtime
+        {
+            visible 1
+            position 0 0
+            size 0 0
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            visible 0
+            text ""
+        }
+    }
+}

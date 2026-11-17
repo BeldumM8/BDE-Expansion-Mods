@@ -1,0 +1,422 @@
+FrameWidgetClass BDE_CraftingRoot
+{
+    visible 1
+    position 0 0
+    size 1 1
+    hexactpos 0
+    vexactpos 0
+    hexactsize 0
+    vexactsize 0
+    ignorepointer 1
+    {
+        PanelWidgetClass BDE_RecipeBrowser
+        {
+            visible 1
+            position 0.01 0.01
+            size 0.32 0.98
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            ignorepointer 1
+            style rover_sim_colorable
+            color 0.025 0.045 0.06 0.96
+            {
+                TextWidgetClass RecipeHeading
+                {
+                    visible 1
+                    position 0.04 0.02
+                    size 0.9 0.045
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "RECIPE LIBRARY"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 22
+                    color 0.78 0.87 0.94 1
+                }
+                PanelWidgetClass SearchBackground
+                {
+                    ignorepointer 1
+                    position 0.04 0.08
+                    size 0.73 0.06
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    style rover_sim_colorable
+                    color 0.10 0.14 0.18 1
+                }
+                EditBoxWidgetClass SearchEditBoxWidget
+                {
+                    visible 1
+                    position 0.04 0.08
+                    size 0.73 0.06
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 0
+                    style Default
+                    text ""
+                    font "gui/fonts/sdf_MetronBook24"
+                }
+                ButtonWidgetClass SortButtonWidget
+                {
+                    visible 1
+                    position 0.8 0.08
+                    size 0.16 0.06
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 0
+                    color 0.08 0.15 0.21 1
+                    style DayZDefaultButtonNoBorder
+                    {
+                        TextWidgetClass SortImageWidget
+                        {
+                            visible 1
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            color 0.78 0.87 0.94 1
+                            ignorepointer 1
+                            position 0 0
+                            size 1 1
+                            text "A-Z"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 18
+                            "text halign" center
+                            "text valign" center
+                        }
+                    }
+                }
+                TextListboxWidgetClass CraftListTextListboxWidget
+                {
+                    visible 1
+                    position 0.04 0.16
+                    size 0.92 0.81
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 0
+                    style Default
+                    color 0.015 0.025 0.035 1
+                    "title visible" 0
+                    colums "1"
+                    lines 28
+                    "highlight row" 1
+                    font "gui/fonts/sdf_MetronLight24"
+                }
+            }
+        }
+        TextWidgetClass IngredientSection
+        {
+            visible 1
+            position 0.35 0.01
+            size 0.6 0.055
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            ignorepointer 1
+            text "REQUIRED MATERIALS"
+            font "gui/fonts/sdf_MetronBook24"
+            "exact text" 1
+            "exact text size" 23
+            color 0.78 0.87 0.94 1
+        }
+        PanelWidgetClass BDE_IngredientCard1
+        {
+            visible 1
+            position 0.35 0.08
+            size 0.31 0.43
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            ignorepointer 1
+            style rover_sim_colorable
+            color 0.025 0.045 0.06 0.96
+            {
+                TextWidgetClass IngredientHeading1
+                {
+                    visible 1
+                    position 0.04 0.025
+                    size 0.92 0.09
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "INGREDIENT 1"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 18
+                    color 0.78 0.87 0.94 1
+                }
+                ItemPreviewWidgetClass Ingredient1ItemPreviewWidget
+                {
+                    visible 1
+                    position 0.46 0.16
+                    size 0.5 0.77
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 0
+                    clipchildren 0
+                    priority 2
+                }
+                TextListboxWidgetClass Ingredient1Label
+                {
+                    visible 1
+                    position 0.04 0.16
+                    size 0.42 0.77
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 0
+                    style Default
+                    color 0.015 0.025 0.035 1
+                    "title visible" 0
+                    colums "1"
+                    lines 12
+                    "highlight row" 1
+                    font "gui/fonts/sdf_MetronLight24"
+                }
+            }
+        }
+        PanelWidgetClass BDE_IngredientCard2
+        {
+            visible 1
+            position 0.675 0.08
+            size 0.31 0.43
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            ignorepointer 1
+            style rover_sim_colorable
+            color 0.025 0.045 0.06 0.96
+            {
+                TextWidgetClass IngredientHeading2
+                {
+                    visible 1
+                    position 0.04 0.025
+                    size 0.92 0.09
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    text "INGREDIENT 2"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 18
+                    color 0.78 0.87 0.94 1
+                }
+                ItemPreviewWidgetClass Ingredient2ItemPreviewWidget
+                {
+                    visible 1
+                    position 0.46 0.16
+                    size 0.5 0.77
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 0
+                    clipchildren 0
+                    priority 2
+                }
+                TextListboxWidgetClass Ingredient2Label
+                {
+                    visible 1
+                    position 0.04 0.16
+                    size 0.42 0.77
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 0
+                    style Default
+                    color 0.015 0.025 0.035 1
+                    "title visible" 0
+                    colums "1"
+                    lines 12
+                    "highlight row" 1
+                    font "gui/fonts/sdf_MetronLight24"
+                }
+            }
+        }
+        TextWidgetClass ResultSection
+        {
+            visible 1
+            position 0.35 0.54
+            size 0.6 0.055
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            ignorepointer 1
+            text "CRAFTED RESULTS"
+            font "gui/fonts/sdf_MetronBook24"
+            "exact text" 1
+            "exact text size" 23
+            color 0.78 0.87 0.94 1
+        }
+        FrameWidgetClass BDE_ResultsRow
+        {
+            visible 1
+            position 0.35 0.61
+            size 0.635 0.37
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            ignorepointer 1
+            {
+                PanelWidgetClass ResultCraft0PanelWidget
+                {
+                    visible 1
+                    position 0.0 0
+                    size 0.3333333333333333 1
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    style rover_sim_colorable
+                    color 0.025 0.045 0.06 0.96
+                    {
+                        ItemPreviewWidgetClass ResultCraft0ItemPreviewWidget
+                        {
+                            visible 1
+                            position 0.04 0.02
+                            size 0.92 0.72
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            ignorepointer 0
+                            clipchildren 0
+                            priority 2
+                        }
+                        TextWidgetClass ResultCraft0Label
+                        {
+                            visible 1
+                            position 0.04 0.77
+                            size 0.92 0.2
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            ignorepointer 1
+                            text ""
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 18
+                            color 0.78 0.87 0.94 1
+                        }
+                    }
+                }
+                PanelWidgetClass ResultCraft1PanelWidget
+                {
+                    visible 1
+                    position 0.3333333333333333 0
+                    size 0.3333333333333333 1
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    style rover_sim_colorable
+                    color 0.025 0.045 0.06 0.96
+                    {
+                        ItemPreviewWidgetClass ResultCraft1ItemPreviewWidget
+                        {
+                            visible 1
+                            position 0.04 0.02
+                            size 0.92 0.72
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            ignorepointer 0
+                            clipchildren 0
+                            priority 2
+                        }
+                        TextWidgetClass ResultCraft1Label
+                        {
+                            visible 1
+                            position 0.04 0.77
+                            size 0.92 0.2
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            ignorepointer 1
+                            text ""
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 18
+                            color 0.78 0.87 0.94 1
+                        }
+                    }
+                }
+                PanelWidgetClass ResultCraft2PanelWidget
+                {
+                    visible 1
+                    position 0.6666666666666666 0
+                    size 0.3333333333333333 1
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    style rover_sim_colorable
+                    color 0.025 0.045 0.06 0.96
+                    {
+                        ItemPreviewWidgetClass ResultCraft2ItemPreviewWidget
+                        {
+                            visible 1
+                            position 0.04 0.02
+                            size 0.92 0.72
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            ignorepointer 0
+                            clipchildren 0
+                            priority 2
+                        }
+                        TextWidgetClass ResultCraft2Label
+                        {
+                            visible 1
+                            position 0.04 0.77
+                            size 0.92 0.2
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            ignorepointer 1
+                            text ""
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 18
+                            color 0.78 0.87 0.94 1
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

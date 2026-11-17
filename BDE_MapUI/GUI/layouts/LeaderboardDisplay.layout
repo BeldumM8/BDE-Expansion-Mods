@@ -1,0 +1,661 @@
+FrameWidgetClass rootFrame
+{
+    position 0 0
+    size 1 1
+    hexactpos 0
+    vexactpos 0
+    hexactsize 0
+    vexactsize 0
+    {
+        PanelWidgetClass BDE_StatsRoot
+        {
+            visible 1
+            ignorepointer 0
+            position 0 0
+            size 1 1
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            style blank
+            {
+                PanelWidgetClass BDE_StatsLeftPanel
+                {
+                    ignorepointer 0
+                    color 0.035 0.035 0.035 0.9
+                    position 0.01 0.02
+                    size 0.34 0.96
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    style rover_sim_colorable
+                    {
+                        PanelWidgetClass BDE_StatsListHeaderPanel
+                        {
+                            ignorepointer 1
+                            color 0.2549 0.2549 0.2549 1
+                            position 0.02 0.015
+                            size 0.96 0.06
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            style rover_sim_colorable
+                        }
+                        TextWidgetClass BDE_StatsListTitle
+                        {
+                            ignorepointer 1
+                            position 0.02 0.015
+                            size 0.96 0.06
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            text "PLAYER LEADERBOARD"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 24
+                            "text halign" center
+                            "text valign" center
+                        }
+                        GridSpacerWidgetClass BDE_StatsFilterGrid
+                        {
+                            ignorepointer 0
+                            position 0.02 0.09
+                            size 0.96 0.075
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            Padding 0
+                            Margin 4
+                            Columns 3
+                            Rows 1
+                            {
+                                ButtonWidgetClass BDE_StatsFilterAll
+                                {
+                                    color 0.6 0.6 0.6 1
+                                    size 1 1
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    style DayZDefaultButtonNoBorder
+                                    text "All Players"
+                                    text_proportion 0.45
+                                    font "gui/fonts/sdf_MetronBook24"
+                                }
+                                ButtonWidgetClass BDE_StatsFilterKills
+                                {
+                                    color 0.2 0.2 0.2 1
+                                    size 1 1
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    style DayZDefaultButtonNoBorder
+                                    text "Most Kills"
+                                    text_proportion 0.45
+                                    font "gui/fonts/sdf_MetronBook24"
+                                }
+                                ButtonWidgetClass BDE_StatsFilterRichest
+                                {
+                                    color 0.2 0.2 0.2 1
+                                    size 1 1
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    style DayZDefaultButtonNoBorder
+                                    text "Richest"
+                                    text_proportion 0.45
+                                    font "gui/fonts/sdf_MetronBook24"
+                                }
+                            }
+                        }
+                        TextListboxWidgetClass BDE_StatsPlayerList
+                        {
+                            ignorepointer 0
+                            color 0.03 0.03 0.03 0.9
+                            position 0.02 0.18
+                            size 0.96 0.75
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            style Default
+                            "title visible" 0
+                            colums "Status;12;Details;43;Player;45;"
+                            lines 30
+                            "highlight row" 1
+                            font "gui/fonts/sdf_MetronLight24"
+                        }
+TextListboxWidgetClass BDE_StatsPlayerListAll
+                        {
+                            visible 0
+                            ignorepointer 0
+                            color 0.03 0.03 0.03 0.9
+                            position 0.02 0.18
+                            size 0.96 0.75
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            style Default
+                            "title visible" 0
+                            colums "Status;12;Player;88;"
+                            lines 30
+                            "highlight row" 1
+                            font "gui/fonts/sdf_MetronLight24"
+                        }
+                        TextWidgetClass BDE_StatsStatusText
+                        {
+                            ignorepointer 1
+                            position 0.02 0.935
+                            size 0.96 0.05
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            text "Status"
+                            font "gui/fonts/sdf_MetronLight24"
+                            "exact text" 1
+                            "exact text size" 16
+                            "text valign" center
+                        }
+                    }
+                }
+                PanelWidgetClass BDE_StatsRightPanel
+                {
+                    ignorepointer 0
+                    color 0.035 0.035 0.035 0.9
+                    position 0.36 0.02
+                    size 0.63 0.96
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    style rover_sim_colorable
+                    {
+                        PanelWidgetClass BDE_StatsPreviewPanel
+                        {
+                            ignorepointer 0
+                            color 0.02 0.02 0.02 0.8
+                            position 0.02 0.02
+                            size 0.37 0.96
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            style blank
+                            {
+                                PlayerPreviewWidgetClass BDE_StatsPlayerPreview
+                                {
+                                    priority 2
+                                    visible 0
+                                    clipchildren 0
+                                    ignorepointer 0
+                                    position 0.05 0.02
+                                    size 0.9 0.94
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    draggable 0
+                                }
+                                TextWidgetClass BDE_StatsPreviewPlaceholder
+                                {
+                                    visible 1
+                                    ignorepointer 1
+                                    position 0.04 0.35
+                                    size 0.92 0.3
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    text "Character preview"
+                                    font "gui/fonts/sdf_MetronLight24"
+                                    "exact text" 1
+                                    "exact text size" 18
+                                    "text halign" center
+                                    "text valign" center
+                                    wrap 1
+                                }
+                            }
+                        }
+                        PanelWidgetClass BDE_StatsDetailsPanel
+                        {
+                            ignorepointer 1
+                            position 0.41 0.02
+                            size 0.57 0.96
+                            hexactpos 0
+                            vexactpos 0
+                            hexactsize 0
+                            vexactsize 0
+                            style blank
+                            {
+                                PanelWidgetClass BDE_StatsDetailsHeaderPanel
+                                {
+                                    ignorepointer 1
+                                    color 0.2549 0.2549 0.2549 1
+                                    position 0 0
+                                    size 1 0.07
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    style rover_sim_colorable
+                                    {
+                                        TextWidgetClass BDE_StatsDetailsHeader
+                                        {
+                                            ignorepointer 1
+                                            position 0 0
+                                            size 1 0.95
+                                            hexactpos 0
+                                            vexactpos 0
+                                            hexactsize 0
+                                            vexactsize 0
+                                            text "STATISTICS"
+                                            font "gui/fonts/sdf_MetronBook24"
+                                            "exact text" 1
+                                            "exact text size" 24
+                                            "text halign" center
+                                            "text valign" center
+                                        }
+                                    }
+                                }
+                                TextWidgetClass BDE_StatsSelectedNameLabel
+                                {
+                                    ignorepointer 1
+                                    position 0 0.095
+                                    size 0.32 0.05
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    text "Player:"
+                                    font "gui/fonts/sdf_MetronBook24"
+                                    "exact text" 1
+                                    "exact text size" 19
+                                    "text valign" center
+                                }
+                                TextWidgetClass BDE_StatsSelectedName
+                                {
+                                    ignorepointer 1
+                                    position 0.32 0.095
+                                    size 0.68 0.05
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    text "No player selected"
+                                    font "gui/fonts/sdf_MetronBook24"
+                                    style Bold
+                                    "exact text" 1
+                                    "exact text size" 19
+                                    "text valign" center
+                                }
+                                TextWidgetClass BDE_StatsSelectedStatusLabel
+                                {
+                                    ignorepointer 1
+                                    position 0 0.155
+                                    size 0.32 0.05
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    text "Status:"
+                                    font "gui/fonts/sdf_MetronLight24"
+                                    "exact text" 1
+                                    "exact text size" 17
+                                    "text valign" center
+                                }
+                                TextWidgetClass BDE_StatsSelectedStatus
+                                {
+                                    ignorepointer 1
+                                    position 0.32 0.155
+                                    size 0.68 0.05
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    text "-"
+                                    font "gui/fonts/sdf_MetronLight24"
+                                    "exact text" 1
+                                    "exact text size" 17
+                                    "text valign" center
+                                }
+                                PanelWidgetClass BDE_StatsDetailsTextBack
+                                {
+                                    ignorepointer 1
+                                    color 0.02 0.02 0.02 0.65
+                                    position 0 0.225
+                                    size 1 0.755
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    style rover_sim_colorable
+                                }
+                                ImageWidgetClass BDE_StatsBankIcon
+                                {
+                                    ignorepointer 1
+                                    position 0.02 0.257
+                                    size 0.055 0.047
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    image0 "set:bde_mapui_icons image:Money"
+                                    mode additive
+                                    "src alpha" 1
+                                    "clamp mode" clamp
+                                    "stretch mode" stretch_w_h
+                                    filter 1
+                                    nocache 0
+                                }
+                                ImageWidgetClass BDE_StatsPlayerKillsIcon
+                                {
+                                    ignorepointer 1
+                                    position 0.02 0.342
+                                    size 0.055 0.047
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    image0 "set:bde_mapui_icons image:PKilled"
+                                    mode additive
+                                    "src alpha" 1
+                                    "clamp mode" clamp
+                                    "stretch mode" stretch_w_h
+                                    filter 1
+                                    nocache 0
+                                }
+                                ImageWidgetClass BDE_StatsAIKillsIcon
+                                {
+                                    ignorepointer 1
+                                    position 0.02 0.427
+                                    size 0.055 0.047
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    image0 "set:bde_mapui_icons image:People"
+                                    mode additive
+                                    "src alpha" 1
+                                    "clamp mode" clamp
+                                    "stretch mode" stretch_w_h
+                                    filter 1
+                                    nocache 0
+                                }
+                                ImageWidgetClass BDE_StatsInfectedIcon
+                                {
+                                    ignorepointer 1
+                                    position 0.02 0.512
+                                    size 0.055 0.047
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    image0 "set:bde_mapui_icons image:ZKilled"
+                                    mode additive
+                                    "src alpha" 1
+                                    "clamp mode" clamp
+                                    "stretch mode" stretch_w_h
+                                    filter 1
+                                    nocache 0
+                                }
+                                ImageWidgetClass BDE_StatsTotalKillsIcon
+                                {
+                                    ignorepointer 1
+                                    position 0.02 0.597
+                                    size 0.055 0.047
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    image0 "set:bde_mapui_icons image:Sword"
+                                    mode additive
+                                    "src alpha" 1
+                                    "clamp mode" clamp
+                                    "stretch mode" stretch_w_h
+                                    filter 1
+                                    nocache 0
+                                }
+                                ImageWidgetClass BDE_StatsDistanceIcon
+                                {
+                                    ignorepointer 1
+                                    position 0.02 0.682
+                                    size 0.055 0.047
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    image0 "set:bde_mapui_icons image:Distance"
+                                    mode additive
+                                    "src alpha" 1
+                                    "clamp mode" clamp
+                                    "stretch mode" stretch_w_h
+                                    filter 1
+                                    nocache 0
+                                }
+                                ImageWidgetClass BDE_StatsTimeIcon
+                                {
+                                    ignorepointer 1
+                                    position 0.02 0.767
+                                    size 0.055 0.047
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    image0 "set:bde_mapui_icons image:SurvivedTime"
+                                    mode additive
+                                    "src alpha" 1
+                                    "clamp mode" clamp
+                                    "stretch mode" stretch_w_h
+                                    filter 1
+                                    nocache 0
+                                }
+                                ImageWidgetClass BDE_StatsLongestHitIcon
+                                {
+                                    ignorepointer 1
+                                    position 0.02 0.852
+                                    size 0.055 0.047
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    image0 "set:bde_mapui_icons image:Sniper"
+                                    mode additive
+                                    "src alpha" 1
+                                    "clamp mode" clamp
+                                    "stretch mode" stretch_w_h
+                                    filter 1
+                                    nocache 0
+                                }
+                                GridSpacerWidgetClass BDE_StatsDetailsGrid
+                                {
+                                    clipchildren 0
+                                    ignorepointer 1
+                                    position 0.09 0.24
+                                    size 0.89 0.68
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    Columns 2
+                                    Rows 8
+                                    Padding 0
+                                    Margin 2
+                                    {
+                                        TextWidgetClass BDE_StatsBankLabel
+                                        {
+                                            ignorepointer 1
+                                            text "ATM Balance"
+                                            font "gui/fonts/sdf_MetronBook24"
+                                            "exact text" 1
+                                            "exact text size" 18
+                                            "text valign" center
+                                        }
+                                        TextWidgetClass BDE_StatsBankValue
+                                        {
+                                            ignorepointer 1
+                                            text "-"
+                                            font "gui/fonts/sdf_MetronBook24"
+                                            style Bold
+                                            "exact text" 1
+                                            "exact text size" 18
+                                            "text halign" right
+                                            "text valign" center
+                                        }
+                                        TextWidgetClass BDE_StatsPlayerKillsLabel
+                                        {
+                                            ignorepointer 1
+                                            text "Player Kills"
+                                            font "gui/fonts/sdf_MetronBook24"
+                                            "exact text" 1
+                                            "exact text size" 18
+                                            "text valign" center
+                                        }
+                                        TextWidgetClass BDE_StatsPlayerKillsValue
+                                        {
+                                            ignorepointer 1
+                                            text "-"
+                                            font "gui/fonts/sdf_MetronBook24"
+                                            style Bold
+                                            "exact text" 1
+                                            "exact text size" 18
+                                            "text halign" right
+                                            "text valign" center
+                                        }
+                                        TextWidgetClass BDE_StatsAIKillsLabel
+                                        {
+                                            ignorepointer 1
+                                            text "AI Kills"
+                                            font "gui/fonts/sdf_MetronBook24"
+                                            "exact text" 1
+                                            "exact text size" 18
+                                            "text valign" center
+                                        }
+                                        TextWidgetClass BDE_StatsAIKillsValue
+                                        {
+                                            ignorepointer 1
+                                            text "-"
+                                            font "gui/fonts/sdf_MetronBook24"
+                                            style Bold
+                                            "exact text" 1
+                                            "exact text size" 18
+                                            "text halign" right
+                                            "text valign" center
+                                        }
+                                        TextWidgetClass BDE_StatsInfectedLabel
+                                        {
+                                            ignorepointer 1
+                                            text "Infected Killed"
+                                            font "gui/fonts/sdf_MetronBook24"
+                                            "exact text" 1
+                                            "exact text size" 18
+                                            "text valign" center
+                                        }
+                                        TextWidgetClass BDE_StatsInfectedValue
+                                        {
+                                            ignorepointer 1
+                                            text "-"
+                                            font "gui/fonts/sdf_MetronBook24"
+                                            style Bold
+                                            "exact text" 1
+                                            "exact text size" 18
+                                            "text halign" right
+                                            "text valign" center
+                                        }
+                                        TextWidgetClass BDE_StatsTotalKillsLabel
+                                        {
+                                            ignorepointer 1
+                                            text "Combat Kills"
+                                            font "gui/fonts/sdf_MetronBook24"
+                                            "exact text" 1
+                                            "exact text size" 18
+                                            "text valign" center
+                                        }
+                                        TextWidgetClass BDE_StatsTotalKillsValue
+                                        {
+                                            ignorepointer 1
+                                            text "-"
+                                            font "gui/fonts/sdf_MetronBook24"
+                                            style Bold
+                                            "exact text" 1
+                                            "exact text size" 18
+                                            "text halign" right
+                                            "text valign" center
+                                        }
+                                        TextWidgetClass BDE_StatsDistanceLabel
+                                        {
+                                            ignorepointer 1
+                                            text "Distance Travelled"
+                                            font "gui/fonts/sdf_MetronBook24"
+                                            "exact text" 1
+                                            "exact text size" 18
+                                            "text valign" center
+                                        }
+                                        TextWidgetClass BDE_StatsDistanceValue
+                                        {
+                                            ignorepointer 1
+                                            text "-"
+                                            font "gui/fonts/sdf_MetronBook24"
+                                            style Bold
+                                            "exact text" 1
+                                            "exact text size" 18
+                                            "text halign" right
+                                            "text valign" center
+                                        }
+                                        TextWidgetClass BDE_StatsTimeLabel
+                                        {
+                                            ignorepointer 1
+                                            text "Time Survived"
+                                            font "gui/fonts/sdf_MetronBook24"
+                                            "exact text" 1
+                                            "exact text size" 18
+                                            "text valign" center
+                                        }
+                                        TextWidgetClass BDE_StatsTimeValue
+                                        {
+                                            ignorepointer 1
+                                            text "-"
+                                            font "gui/fonts/sdf_MetronBook24"
+                                            style Bold
+                                            "exact text" 1
+                                            "exact text size" 18
+                                            "text halign" right
+                                            "text valign" center
+                                        }
+                                        TextWidgetClass BDE_StatsLongestHitLabel
+                                        {
+                                            ignorepointer 1
+                                            text "Longest Survivor Hit"
+                                            font "gui/fonts/sdf_MetronBook24"
+                                            "exact text" 1
+                                            "exact text size" 18
+                                            "text valign" center
+                                        }
+                                        TextWidgetClass BDE_StatsLongestHitValue
+                                        {
+                                            ignorepointer 1
+                                            text "-"
+                                            font "gui/fonts/sdf_MetronBook24"
+                                            style Bold
+                                            "exact text" 1
+                                            "exact text size" 18
+                                            "text halign" right
+                                            "text valign" center
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

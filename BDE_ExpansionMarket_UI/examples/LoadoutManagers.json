@@ -1,0 +1,39 @@
+{
+    "Version": 2,
+    "Stations": [
+        {
+            "Name": "Normal Trader Loadout Manager",
+            "ClassName": "ExpansionTraderMirek",
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Orientation": [
+                0,
+                0,
+                0
+            ],
+            "SpawnEntity": true,
+            "Enabled": false,
+            "Loadout": ""
+        },
+        {
+            "Name": "Existing editor object example",
+            "ClassName": "Land_Misc_Well_Pump_Blue",
+            "Position": [
+                0,
+                0,
+                0
+            ],
+            "Orientation": [
+                0,
+                0,
+                0
+            ],
+            "SpawnEntity": false,
+            "Enabled": false,
+            "Loadout": ""
+        }
+    ]
+}

@@ -1,0 +1,135 @@
+PanelWidgetClass BDE_EMU_CategoryEntry {
+ visible 1
+ clipchildren 1
+ ignorepointer 1
+ size 1 54
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 1
+ scriptclass "BDE_EMU_CategoryEntryController"
+ {
+  PanelWidgetClass bde_category_border {
+   visible 1
+   ignorepointer 1
+   color 0.039 0.137 0.212 1
+   position 0 0
+   size 1 50
+   hexactpos 0
+   vexactpos 1
+   hexactsize 0
+   vexactsize 1
+   style UIDefaultPanel
+  }
+  PanelWidgetClass bde_category_background {
+   visible 1
+   ignorepointer 1
+   color 0.012 0.031 0.055 1
+   position 0.01 2
+   size 0.98 46
+   hexactpos 0
+   vexactpos 1
+   hexactsize 0
+   vexactsize 1
+   style UIDefaultPanel
+  }
+  ImageWidgetClass bde_category_icon {
+   visible 1
+   ignorepointer 1
+   color 0.65 0.82 0.95 1
+   position 12 0
+   size 30 30
+   valign center_ref
+   hexactpos 1
+   vexactpos 0
+   hexactsize 1
+   vexactsize 1
+   scriptclass "ViewBinding"
+   imageTexture "{764DDD38FF7B105D}DayZExpansion/Core/GUI/icons/hud/questionmark_64x64.edds"
+   mode blend
+   "src alpha" 1
+   "clamp mode" clamp
+   "stretch mode" stretch_w_h
+   {
+    ScriptParamsClass {
+     Binding_Name "CategoryIcon"
+    }
+   }
+  }
+  TextWidgetClass bde_category_name {
+   visible 1
+   ignorepointer 1
+   color 0.90 0.94 0.98 1
+   position 52 4
+   size 0.62 24
+   hexactpos 1
+   vexactpos 1
+   hexactsize 0
+   vexactsize 1
+   scriptclass "ViewBinding"
+   style Bold
+   text "CATEGORY"
+   font "gui/fonts/etelkatextpro22"
+   "exact text" 1
+   "exact text size" 18
+   "text valign" center
+   {
+    ScriptParamsClass {
+     Binding_Name "CategoryName"
+    }
+   }
+  }
+  TextWidgetClass bde_category_count {
+   visible 1
+   ignorepointer 1
+   color 0.45 0.60 0.72 1
+   position 52 27
+   size 0.62 17
+   hexactpos 1
+   vexactpos 1
+   hexactsize 0
+   vexactsize 1
+   scriptclass "ViewBinding"
+   text "0 ITEMS"
+   font "gui/fonts/etelkatextpro16"
+   "exact text" 1
+   "exact text size" 13
+   "text valign" center
+   {
+    ScriptParamsClass {
+     Binding_Name "CategoryInfo"
+    }
+   }
+  }
+  ImageWidgetClass bde_category_arrow {
+   visible 1
+   ignorepointer 1
+   color 0.48 0.72 0.90 1
+   position 12 0
+   size 24 24
+   halign right_ref
+   valign center_ref
+   hexactpos 1
+   vexactpos 0
+   hexactsize 1
+   vexactsize 1
+   imageTexture "{EB294B6B8215EC25}DayZExpansion/Core/GUI/icons/hud/arrow_64x64.edds"
+   mode blend
+   "src alpha" 1
+   "clamp mode" clamp
+   "stretch mode" stretch_w_h
+   "flip u" 1
+  }
+  ButtonWidgetClass bde_category_button {
+   visible 1
+   color 0 0 0 0
+   size 1 50
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 1
+   scriptclass ""
+   style Empty
+  }
+ }
+}

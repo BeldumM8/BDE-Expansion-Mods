@@ -1,0 +1,34 @@
+PanelWidgetClass Group
+{
+    position 0 0
+    size 0.98 38
+    hexactpos 0
+    vexactpos 1
+    hexactsize 0
+    vexactsize 1
+    visible 1
+    clipchildren 1
+    style rover_sim_colorable
+    color 0.025 0.075 0.11 1
+    ignorepointer 1
+    {
+        TextWidgetClass GroupName
+        {
+            position 0.025 0
+            size 0.95 1
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            visible 1
+            clipchildren 1
+            ignorepointer 1
+            color 0.43 0.73 0.90 1
+            text ""
+            font "gui/fonts/Metron17"
+            "text valign" center
+            "exact text" 1
+            "exact text size" 17
+        }
+    }
+}

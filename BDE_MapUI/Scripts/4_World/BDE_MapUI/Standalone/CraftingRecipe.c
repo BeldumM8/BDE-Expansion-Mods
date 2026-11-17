@@ -1,0 +1,105 @@
+class BDE_MapUI_CraftingRecipe
+{
+	ref RecipeBase Recipe;
+    int m_TempMainIndex;  // Define the index here
+	ref array<ref BDE_MapUI_CraftingItem> Results;
+	ref array<ref array<ref BDE_MapUI_CraftingItem>> Ingredients;
+
+
+    void BDE_MapUI_CraftingRecipe(RecipeBase recipeBase)
+    {
+		Recipe = recipeBase;
+
+		Results = recipeBase.BDE_MapUI_GetResults();
+		Ingredients = recipeBase.BDE_MapUI_GetIngredients();
+
+		if (!IsValid())
+			return;
+    }
+
+	bool IsValid()
+	{
+		//! Discard invalid recipes with no results
+		if (Results.Count() == 0)
+			return false;
+
+		foreach (array<ref BDE_MapUI_CraftingItem> items : Ingredients )
+		{
+			//! Discard invalid recipes with no ingredients
+			if (items.Count() == 0)
+				return false;
+		}
+
+		return true;
+	}
+
+    // Ajoute une classe d'item à la liste des classes associées à cet item
+    /*void AddClassName(string className)
+    {
+        classNames.Insert(className);
+    }*/
+
+    // Renvoie le nom d'affichage de cet item
+    string GetDisplayName()
+    {
+        string recipeNameLower = Recipe.m_Name;
+        recipeNameLower.ToLower();
+
+        string displayName = Recipe.m_Name;
+
+        switch (recipeNameLower)
+        {
+            case "#fill":
+            case "#mount":
+            case "#pack_tent":
+                displayName += " " + Results[m_TempMainIndex].displayName;
+                break;
+            case "#str_breakdown0":
+			case "#str_gutandprepare0":
+			case "#str_prepare0":
+			case "#str_split0":
+            case "#sharpen":
+                if (Results.Count() > 1 && g_Game.IsKindOf(Results[m_TempMainIndex].classNames[0], "SeedBase"))
+                {
+                    recipeNameLower = "#str_cutoutseeds0";
+                    displayName = "#str_cutoutseeds0";
+                }
+                else
+                {
+                    displayName += " " + Ingredients[0][0].displayName;
+                    break;
+                }
+            case "#str_cutoutseeds0":
+                if (Results[m_TempMainIndex].amount > 1)
+                    displayName += " (" + Results[m_TempMainIndex].amount + "x)";
+                displayName = Ingredients[0][0].displayName + ": " + displayName;
+                break;
+            case "#str_craftgutsrope0":
+            case "#str_craftragrope0":
+                displayName = Ingredients[0][0].displayName + ": " + displayName;
+                break;
+            default:
+                if (recipeNameLower.IndexOf("#str_craft") == 0 || recipeNameLower.IndexOf("#craft") == 0 || recipeNameLower == "#str_sawwoodenlog0")
+                {
+                    //! Localiser "Craft" si nécessaire
+                    displayName = "Craft " + Results[m_TempMainIndex].displayName;
+                    if (Results[m_TempMainIndex].amount > 1)
+                        displayName += " (" + Results[m_TempMainIndex].amount + "x)";
+                }
+                break;
+        }
+
+        displayName = Widget.TranslateString(displayName);
+        string actionName = displayName;
+        actionName.TrimInPlace();
+        actionName.ToLower();
+        if (actionName == "disassemble" || actionName == "dismantle" || actionName == "deconstruct")
+        {
+            if (Ingredients && Ingredients.Count() > 0 && Ingredients[0] && Ingredients[0].Count() > 0 && Ingredients[0][0])
+            {
+                displayName += " " + Widget.TranslateString(Ingredients[0][0].displayName);
+            }
+        }
+        return displayName;
+    }
+}

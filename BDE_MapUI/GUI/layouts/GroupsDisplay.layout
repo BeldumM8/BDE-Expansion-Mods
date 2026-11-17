@@ -1,0 +1,528 @@
+FrameWidgetClass GroupsRoot
+{
+    position 0 0
+    size 1 1
+    hexactpos 0
+    vexactpos 0
+    hexactsize 0
+    vexactsize 0
+    visible 1
+    {
+        TextWidgetClass GroupHeading
+        {
+            position 0.01 0.01
+            size 0.98 0.05
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            ignorepointer 1
+            color 0.73 0.82 0.88 1
+            text "GROUPS"
+            font "gui/fonts/sdf_MetronBook24"
+            "exact text" 1
+            "exact text size" 24
+            "text valign" center
+        }
+        TextWidgetClass GroupCreateHeading
+        {
+            position 0.01 0.075
+            size 0.55 0.04
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            ignorepointer 1
+            color 0.73 0.82 0.88 1
+            text "CREATE A GROUP - name and tag"
+            font "gui/fonts/sdf_MetronBook24"
+            "exact text" 1
+            "exact text size" 18
+            "text valign" center
+        }
+        EditBoxWidgetClass GroupName
+        {
+            position 0.01 0.12
+            size 0.32 0.055
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            color 1 1 1 1
+            style Default
+            font "gui/fonts/sdf_MetronBook24"
+            "exact text" 1
+            "exact text size" 18
+            text ""
+        }
+        EditBoxWidgetClass GroupTag
+        {
+            position 0.34 0.12
+            size 0.1 0.055
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            color 1 1 1 1
+            style Default
+            font "gui/fonts/sdf_MetronBook24"
+            "exact text" 1
+            "exact text size" 18
+            text ""
+        }
+        ButtonWidgetClass GroupCreate
+        {
+            position 0.45 0.12
+            size 0.13 0.055
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            color 0.08 0.15 0.21 1
+            style DayZDefaultButtonNoBorder
+            {
+                TextWidgetClass GroupCreateLabel
+                {
+                    position 0.03 0
+                    size 0.94 1
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    color 0.73 0.82 0.88 1
+                    text "Create"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 18
+                    "text valign" center
+                }
+            }
+        }
+        TextWidgetClass GroupMembersLabel
+        {
+            position 0.01 0.2
+            size 0.3 0.045
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            ignorepointer 1
+            color 0.73 0.82 0.88 1
+            text "MEMBERS"
+            font "gui/fonts/sdf_MetronBook24"
+            "exact text" 1
+            "exact text size" 18
+            "text valign" center
+        }
+        TextListboxWidgetClass GroupMembers
+        {
+            position 0.01 0.25
+            size 0.3 0.42
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            color 0.05 0.08 0.10 1
+            style Default
+            "title visible" 0
+            colums "1"
+            lines 16
+            "highlight row" 1
+            font "gui/fonts/sdf_MetronLight24"
+        }
+        ButtonWidgetClass GroupKick
+        {
+            position 0.01 0.69
+            size 0.3 0.055
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            color 0.08 0.15 0.21 1
+            style DayZDefaultButtonNoBorder
+            {
+                TextWidgetClass GroupKickLabel
+                {
+                    position 0.03 0
+                    size 0.94 1
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    color 0.73 0.82 0.88 1
+                    text "Remove member"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 18
+                    "text valign" center
+                }
+            }
+        }
+        ButtonWidgetClass GroupLeave
+        {
+            position 0.01 0.765
+            size 0.145 0.055
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            color 0.08 0.15 0.21 1
+            style DayZDefaultButtonNoBorder
+            {
+                TextWidgetClass GroupLeaveLabel
+                {
+                    position 0.03 0
+                    size 0.94 1
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    color 0.73 0.82 0.88 1
+                    text "Leave group"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 18
+                    "text valign" center
+                }
+            }
+        }
+        ButtonWidgetClass GroupDissolve
+        {
+            position 0.165 0.765
+            size 0.145 0.055
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            color 0.08 0.15 0.21 1
+            style DayZDefaultButtonNoBorder
+            {
+                TextWidgetClass GroupDissolveLabel
+                {
+                    position 0.03 0
+                    size 0.94 1
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    color 0.73 0.82 0.88 1
+                    text "Dissolve"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 18
+                    "text valign" center
+                }
+            }
+        }
+        TextWidgetClass GroupOnlineLabel
+        {
+            position 0.34 0.2
+            size 0.3 0.045
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            ignorepointer 1
+            color 0.73 0.82 0.88 1
+            text "INVITE ONLINE PLAYERS"
+            font "gui/fonts/sdf_MetronBook24"
+            "exact text" 1
+            "exact text size" 18
+            "text valign" center
+        }
+        TextListboxWidgetClass GroupOnline
+        {
+            position 0.34 0.25
+            size 0.3 0.42
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            color 0.05 0.08 0.10 1
+            style Default
+            "title visible" 0
+            colums "1"
+            lines 16
+            "highlight row" 1
+            font "gui/fonts/sdf_MetronLight24"
+        }
+        ButtonWidgetClass GroupInvite
+        {
+            position 0.34 0.69
+            size 0.3 0.055
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            color 0.08 0.15 0.21 1
+            style DayZDefaultButtonNoBorder
+            {
+                TextWidgetClass GroupInviteLabel
+                {
+                    position 0.03 0
+                    size 0.94 1
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    color 0.73 0.82 0.88 1
+                    text "Invite player"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 18
+                    "text valign" center
+                }
+            }
+        }
+        TextWidgetClass GroupInvitesLabel
+        {
+            position 0.67 0.2
+            size 0.32 0.045
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            ignorepointer 1
+            color 0.73 0.82 0.88 1
+            text "INVITATIONS"
+            font "gui/fonts/sdf_MetronBook24"
+            "exact text" 1
+            "exact text size" 18
+            "text valign" center
+        }
+        TextListboxWidgetClass GroupInvites
+        {
+            position 0.67 0.25
+            size 0.32 0.19
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            color 0.05 0.08 0.10 1
+            style Default
+            "title visible" 0
+            colums "1"
+            lines 7
+            "highlight row" 1
+            font "gui/fonts/sdf_MetronLight24"
+        }
+        ButtonWidgetClass GroupAccept
+        {
+            position 0.67 0.46
+            size 0.15 0.055
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            color 0.08 0.15 0.21 1
+            style DayZDefaultButtonNoBorder
+            {
+                TextWidgetClass GroupAcceptLabel
+                {
+                    position 0.03 0
+                    size 0.94 1
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    color 0.73 0.82 0.88 1
+                    text "Accept"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 18
+                    "text valign" center
+                }
+            }
+        }
+        ButtonWidgetClass GroupDecline
+        {
+            position 0.84 0.46
+            size 0.15 0.055
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            color 0.08 0.15 0.21 1
+            style DayZDefaultButtonNoBorder
+            {
+                TextWidgetClass GroupDeclineLabel
+                {
+                    position 0.03 0
+                    size 0.94 1
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    color 0.73 0.82 0.88 1
+                    text "Decline"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 18
+                    "text valign" center
+                }
+            }
+        }
+        TextWidgetClass GroupPermissionsLabel
+        {
+            position 0.67 0.55
+            size 0.32 0.045
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            ignorepointer 1
+            color 0.73 0.82 0.88 1
+            text "SELECTED MEMBER PERMISSIONS"
+            font "gui/fonts/sdf_MetronBook24"
+            "exact text" 1
+            "exact text size" 16
+            "text valign" center
+        }
+        CheckBoxWidgetClass GroupPermEdit
+        {
+            position 0.67 0.605
+            size 0.32 0.04
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            style DayZDefaultCheckBox
+            text "Edit group"
+            font "gui/fonts/sdf_MetronBook24"
+            text_proportion 0.5
+        }
+        CheckBoxWidgetClass GroupPermInvite
+        {
+            position 0.67 0.65
+            size 0.32 0.04
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            style DayZDefaultCheckBox
+            text "Invite players"
+            font "gui/fonts/sdf_MetronBook24"
+            text_proportion 0.5
+        }
+        CheckBoxWidgetClass GroupPermKick
+        {
+            position 0.67 0.695
+            size 0.32 0.04
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            style DayZDefaultCheckBox
+            text "Remove members"
+            font "gui/fonts/sdf_MetronBook24"
+            text_proportion 0.5
+        }
+        CheckBoxWidgetClass GroupPermDelete
+        {
+            position 0.67 0.74
+            size 0.32 0.04
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            style DayZDefaultCheckBox
+            text "Dissolve group"
+            font "gui/fonts/sdf_MetronBook24"
+            text_proportion 0.5
+        }
+        CheckBoxWidgetClass GroupPermMoney
+        {
+            position 0.67 0.7849999999999999
+            size 0.32 0.04
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            style DayZDefaultCheckBox
+            text "Withdraw group funds"
+            font "gui/fonts/sdf_MetronBook24"
+            text_proportion 0.5
+        }
+        ButtonWidgetClass GroupSavePermissions
+        {
+            position 0.67 0.845
+            size 0.32 0.055
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            color 0.08 0.15 0.21 1
+            style DayZDefaultButtonNoBorder
+            {
+                TextWidgetClass GroupSavePermissionsLabel
+                {
+                    position 0.03 0
+                    size 0.94 1
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    color 0.73 0.82 0.88 1
+                    text "Save permissions"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 18
+                    "text valign" center
+                }
+            }
+        }
+        ButtonWidgetClass GroupRefresh
+        {
+            position 0.34 0.765
+            size 0.3 0.055
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            color 0.08 0.15 0.21 1
+            style DayZDefaultButtonNoBorder
+            {
+                TextWidgetClass GroupRefreshLabel
+                {
+                    position 0.03 0
+                    size 0.94 1
+                    hexactpos 0
+                    vexactpos 0
+                    hexactsize 0
+                    vexactsize 0
+                    ignorepointer 1
+                    color 0.73 0.82 0.88 1
+                    text "Refresh online players"
+                    font "gui/fonts/sdf_MetronBook24"
+                    "exact text" 1
+                    "exact text size" 18
+                    "text valign" center
+                }
+            }
+        }
+        TextWidgetClass GroupStatus
+        {
+            position 0.01 0.92
+            size 0.98 0.065
+            hexactpos 0
+            vexactpos 0
+            hexactsize 0
+            vexactsize 0
+            ignorepointer 1
+            color 0.73 0.82 0.88 1
+            text ""
+            font "gui/fonts/sdf_MetronBook24"
+            "exact text" 1
+            "exact text size" 16
+            "text valign" center
+        }
+    }
+}

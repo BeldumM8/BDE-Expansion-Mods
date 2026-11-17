@@ -1,0 +1,860 @@
+FrameWidgetClass rootFrame
+{
+    position 0 0
+    size 1 1
+    hexactpos 0
+    vexactpos 0
+    hexactsize 0
+    vexactsize 0
+    {
+        PanelWidgetClass BDE_VIPRoot
+        {
+            visible 1
+            ignorepointer 0
+            position 0 0
+            size 1 1
+            style blank
+            {
+                PanelWidgetClass BDE_VIPPlayersPanel
+                {
+                    ignorepointer 0
+                    color 0.035 0.035 0.035 0.92
+                    position 0.01 0.02
+                    size 0.385 0.96
+                    style rover_sim_colorable
+                    {
+                        PanelWidgetClass BDE_VIPPlayersHeaderBack
+                        {
+                            ignorepointer 1
+                            color 0.2549 0.2549 0.2549 1
+                            position 0.02 0.015
+                            size 0.96 0.06
+                            style rover_sim_colorable
+                        }
+                        TextWidgetClass BDE_VIPPlayersHeader
+                        {
+                            ignorepointer 1
+                            position 0.02 0.015
+                            size 0.96 0.06
+                            text "PLAYERS"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 20
+                            "text halign" center
+                            "text valign" center
+                        }
+                        EditBoxWidgetClass BDE_VIPSearch
+                        {
+                            position 0.02 0.09
+                            size 0.96 0.055
+                            style Editor
+                            text ""
+                            "hint text" "Search player name / ID"
+                            "limit visible" 1
+                            "Use default text" 0
+                            "exact text" 1
+                            font "gui/fonts/MetronBook-Bold22"
+                            "exact text size" 16
+                        }
+                        GridSpacerWidgetClass BDE_VIPFilterGrid
+                        {
+                            ignorepointer 0
+                            position 0.02 0.155
+                            size 0.96 0.06
+                            Columns 4
+                            Rows 1
+                            Padding 0
+                            Margin 3
+                            {
+                                ButtonWidgetClass BDE_VIPFilterAll
+                                {
+                                    color 0.16 0.35 0.48 1
+                                    size 1 1
+                                    style DayZDefaultButtonNoBorder
+                                    text ""
+
+                                    {
+                                        TextWidgetClass BDE_VIPFilterAllLabel
+                                        {
+                                            ignorepointer 1
+                                            position 0.03 0
+                                            size 0.94 1
+                                            hexactpos 0
+                                            vexactpos 0
+                                            hexactsize 0
+                                            vexactsize 0
+                                            text "All"
+                                            font "gui/fonts/sdf_MetronBook24"
+                                            "exact text" 1
+                                            "exact text size" 16
+                                            "text halign" center
+                                            "text valign" center
+                                        }
+                                    }
+                                }
+                                ButtonWidgetClass BDE_VIPFilterVIP
+                                {
+                                    color 0.12 0.12 0.12 1
+                                    size 1 1
+                                    style DayZDefaultButtonNoBorder
+                                    text ""
+
+                                    {
+                                        TextWidgetClass BDE_VIPFilterVIPLabel
+                                        {
+                                            ignorepointer 1
+                                            position 0.03 0
+                                            size 0.94 1
+                                            hexactpos 0
+                                            vexactpos 0
+                                            hexactsize 0
+                                            vexactsize 0
+                                            text "VIP"
+                                            font "gui/fonts/sdf_MetronBook24"
+                                            "exact text" 1
+                                            "exact text size" 16
+                                            "text halign" center
+                                            "text valign" center
+                                        }
+                                    }
+                                }
+                                ButtonWidgetClass BDE_VIPFilterNonVIP
+                                {
+                                    color 0.12 0.12 0.12 1
+                                    size 1 1
+                                    style DayZDefaultButtonNoBorder
+                                    text ""
+
+                                    {
+                                        TextWidgetClass BDE_VIPFilterNonVIPLabel
+                                        {
+                                            ignorepointer 1
+                                            position 0.03 0
+                                            size 0.94 1
+                                            hexactpos 0
+                                            vexactpos 0
+                                            hexactsize 0
+                                            vexactsize 0
+                                            text "Non-VIP"
+                                            font "gui/fonts/sdf_MetronBook24"
+                                            "exact text" 1
+                                            "exact text size" 16
+                                            "text halign" center
+                                            "text valign" center
+                                        }
+                                    }
+                                }
+                                ButtonWidgetClass BDE_VIPFilterPending
+                                {
+                                    color 0.12 0.12 0.12 1
+                                    size 1 1
+                                    style DayZDefaultButtonNoBorder
+                                    text ""
+
+                                    {
+                                        TextWidgetClass BDE_VIPFilterPendingLabel
+                                        {
+                                            ignorepointer 1
+                                            position 0.03 0
+                                            size 0.94 1
+                                            hexactpos 0
+                                            vexactpos 0
+                                            hexactsize 0
+                                            vexactsize 0
+                                            text "Pending"
+                                            font "gui/fonts/sdf_MetronBook24"
+                                            "exact text" 1
+                                            "exact text size" 16
+                                            "text halign" center
+                                            "text valign" center
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        TextListboxWidgetClass BDE_VIPPlayerList
+                        {
+                            ignorepointer 0
+                            color 0.02 0.02 0.02 0.95
+                            position 0.02 0.225
+                            size 0.96 0.665
+                            style Default
+                            "title visible" 1
+                            colums "Player;46;VIP Tier;30;State;24;"
+                            lines 34
+                            "highlight row" 1
+                            font "gui/fonts/sdf_MetronLight24"
+                        }
+                        TextWidgetClass BDE_VIPListStatus
+                        {
+                            ignorepointer 1
+                            position 0.02 0.90
+                            size 0.64 0.045
+                            text "Loading players..."
+                            font "gui/fonts/sdf_MetronLight24"
+                            "exact text" 1
+                            "exact text size" 15
+                            "text valign" center
+                        }
+                        ButtonWidgetClass BDE_VIPRefresh
+                        {
+                            color 0.08 0.15 0.21 1
+                            position 0.68 0.90
+                            size 0.30 0.045
+                            style DayZDefaultButtonNoBorder
+                            text ""
+
+                            {
+                                TextWidgetClass BDE_VIPRefreshLabel
+                                {
+                                    ignorepointer 1
+                                    position 0.03 0
+                                    size 0.94 1
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    text "Refresh"
+                                    font "gui/fonts/sdf_MetronBook24"
+                                    "exact text" 1
+                                    "exact text size" 16
+                                    "text halign" center
+                                    "text valign" center
+                                }
+                            }
+                        }
+                    }
+                }
+
+                PanelWidgetClass BDE_VIPPlayerPanel
+                {
+                    ignorepointer 0
+                    color 0.035 0.035 0.035 0.92
+                    position 0.405 0.02
+                    size 0.285 0.96
+                    style rover_sim_colorable
+                    {
+                        PanelWidgetClass BDE_VIPPlayerHeaderBack
+                        {
+                            ignorepointer 1
+                            color 0.2549 0.2549 0.2549 1
+                            position 0.025 0.015
+                            size 0.95 0.06
+                            style rover_sim_colorable
+                        }
+                        TextWidgetClass BDE_VIPPlayerHeader
+                        {
+                            ignorepointer 1
+                            position 0.025 0.015
+                            size 0.95 0.06
+                            text "SELECTED PLAYER"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 20
+                            "text halign" center
+                            "text valign" center
+                        }
+                        TextWidgetClass BDE_VIPSelectedName
+                        {
+                            ignorepointer 1
+                            position 0.04 0.095
+                            size 0.92 0.055
+                            text "No player selected"
+                            font "gui/fonts/sdf_MetronBook24"
+                            style Bold
+                            "exact text" 1
+                            "exact text size" 18
+                            "text halign" center
+                            "text valign" center
+                        }
+                        MultilineTextWidgetClass BDE_VIPSelectedIDs
+                        {
+                            ignorepointer 1
+                            position 0.04 0.155
+                            size 0.92 0.11
+                            text "DayZ ID: -\nSteam64: -"
+                            font "gui/fonts/sdf_MetronLight24"
+                            "exact text" 1
+                            "exact text size" 14
+                            wrap 1
+                        }
+                        TextWidgetClass BDE_VIPSelectedState
+                        {
+                            ignorepointer 1
+                            position 0.04 0.27
+                            size 0.92 0.045
+                            text "Status: -"
+                            font "gui/fonts/sdf_MetronLight24"
+                            "exact text" 1
+                            "exact text size" 16
+                            "text valign" center
+                        }
+                        TextWidgetClass BDE_VIPSelectedTier
+                        {
+                            ignorepointer 1
+                            position 0.04 0.315
+                            size 0.92 0.045
+                            text "VIP Tier: None"
+                            font "gui/fonts/sdf_MetronLight24"
+                            "exact text" 1
+                            "exact text size" 16
+                            "text valign" center
+                        }
+                        TextWidgetClass BDE_VIPAssignLabel
+                        {
+                            ignorepointer 1
+                            position 0.04 0.38
+                            size 0.92 0.035
+                            text "ASSIGN VIP TIER"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 15
+                            "text valign" center
+                        }
+                        TextListboxWidgetClass BDE_VIPAssignTierList
+                        {
+                            ignorepointer 0
+                            color 0.02 0.02 0.02 0.95
+                            position 0.04 0.42
+                            size 0.92 0.20
+                            style Default
+                            "title visible" 0
+                            colums "Tier;100;"
+                            lines 10
+                            "highlight row" 1
+                            font "gui/fonts/sdf_MetronLight24"
+                        }
+                        GridSpacerWidgetClass BDE_VIPPlayerButtons
+                        {
+                            ignorepointer 0
+                            position 0.04 0.635
+                            size 0.92 0.06
+                            Columns 2
+                            Rows 1
+                            Padding 0
+                            Margin 5
+                            {
+                                ButtonWidgetClass BDE_VIPAssignButton
+                                {
+                                    color 0.08 0.25 0.15 1
+                                    size 1 1
+                                    style DayZDefaultButtonNoBorder
+                                    text ""
+
+                                    {
+                                        TextWidgetClass BDE_VIPAssignButtonLabel
+                                        {
+                                            ignorepointer 1
+                                            position 0.03 0
+                                            size 0.94 1
+                                            hexactpos 0
+                                            vexactpos 0
+                                            hexactsize 0
+                                            vexactsize 0
+                                            text "Assign Tier"
+                                            font "gui/fonts/sdf_MetronBook24"
+                                            "exact text" 1
+                                            "exact text size" 16
+                                            "text halign" center
+                                            "text valign" center
+                                        }
+                                    }
+                                }
+                                ButtonWidgetClass BDE_VIPDisableButton
+                                {
+                                    color 0.384 0.082 0.11 1
+                                    size 1 1
+                                    style DayZDefaultButtonNoBorder
+                                    text ""
+
+                                    {
+                                        TextWidgetClass BDE_VIPDisableButtonLabel
+                                        {
+                                            ignorepointer 1
+                                            position 0.03 0
+                                            size 0.94 1
+                                            hexactpos 0
+                                            vexactpos 0
+                                            hexactsize 0
+                                            vexactsize 0
+                                            text "Remove VIP"
+                                            font "gui/fonts/sdf_MetronBook24"
+                                            "exact text" 1
+                                            "exact text size" 16
+                                            "text halign" center
+                                            "text valign" center
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        TextWidgetClass BDE_VIPPendingLabel
+                        {
+                            ignorepointer 1
+                            position 0.04 0.725
+                            size 0.92 0.035
+                            text "ADD PENDING VIP BY STEAM64"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 14
+                            "text valign" center
+                        }
+                        EditBoxWidgetClass BDE_VIPPendingSteam64
+                        {
+                            position 0.04 0.765
+                            size 0.92 0.05
+                            style Editor
+                            text ""
+                            "hint text" "Steam64 ID"
+                            "limit visible" 1
+                            "Use default text" 0
+                            "exact text" 1
+                            font "gui/fonts/MetronBook-Bold22"
+                            "exact text size" 16
+                        }
+                        ButtonWidgetClass BDE_VIPPendingAdd
+                        {
+                            color 0.08 0.15 0.21 1
+                            position 0.04 0.825
+                            size 0.92 0.055
+                            style DayZDefaultButtonNoBorder
+                            text ""
+
+                            {
+                                TextWidgetClass BDE_VIPPendingAddLabel
+                                {
+                                    ignorepointer 1
+                                    position 0.03 0
+                                    size 0.94 1
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    text "Add Pending Using Selected Tier"
+                                    font "gui/fonts/sdf_MetronBook24"
+                                    "exact text" 1
+                                    "exact text size" 16
+                                    "text halign" center
+                                    "text valign" center
+                                }
+                            }
+                        }
+                        TextWidgetClass BDE_VIPActionStatus
+                        {
+                            ignorepointer 1
+                            position 0.04 0.895
+                            size 0.92 0.07
+                            text ""
+                            font "gui/fonts/sdf_MetronLight24"
+                            "exact text" 1
+                            "exact text size" 14
+                            wrap 1
+                            "text halign" center
+                            "text valign" center
+                        }
+                    }
+                }
+
+                PanelWidgetClass BDE_VIPTierPanel
+                {
+                    ignorepointer 0
+                    color 0.035 0.035 0.035 0.92
+                    position 0.70 0.02
+                    size 0.29 0.62
+                    style rover_sim_colorable
+                    {
+                        PanelWidgetClass BDE_VIPTierHeaderBack
+                        {
+                            ignorepointer 1
+                            color 0.2549 0.2549 0.2549 1
+                            position 0.025 0.02
+                            size 0.95 0.09
+                            style rover_sim_colorable
+                        }
+                        TextWidgetClass BDE_VIPTierHeader
+                        {
+                            ignorepointer 1
+                            position 0.025 0.02
+                            size 0.95 0.09
+                            text "VIP TIER SETTINGS"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 20
+                            "text halign" center
+                            "text valign" center
+                        }
+                        TextListboxWidgetClass BDE_VIPTierList
+                        {
+                            ignorepointer 0
+                            color 0.02 0.02 0.02 0.95
+                            position 0.04 0.13
+                            size 0.92 0.22
+                            style Default
+                            "title visible" 0
+                            colums "Tier;100;"
+                            lines 8
+                            "highlight row" 1
+                            font "gui/fonts/sdf_MetronLight24"
+                        }
+                        TextWidgetClass BDE_VIPTierNameLabel
+                        {
+                            ignorepointer 1
+                            position 0.04 0.37
+                            size 0.45 0.04
+                            text "Tier Name"
+                            font "gui/fonts/sdf_MetronLight24"
+                            "exact text" 1
+                            "exact text size" 15
+                        }
+                        EditBoxWidgetClass BDE_VIPTierName
+                        {
+                            position 0.50 0.365
+                            size 0.46 0.05
+                            style Editor
+                            text ""
+                            "limit visible" 1
+                            "Use default text" 0
+                            "exact text" 1
+                            font "gui/fonts/MetronBook-Bold22"
+                            "exact text size" 16
+                        }
+                        TextWidgetClass BDE_VIPIncomeLabel
+                        {
+                            ignorepointer 1
+                            position 0.04 0.435
+                            size 0.45 0.04
+                            text "Passive $$ Multiplier"
+                            font "gui/fonts/sdf_MetronLight24"
+                            "exact text" 1
+                            "exact text size" 15
+                        }
+                        EditBoxWidgetClass BDE_VIPIncomeMultiplier
+                        {
+                            position 0.50 0.43
+                            size 0.46 0.05
+                            style Editor
+                            text "1.0"
+                            "limit visible" 1
+                            "Use default text" 0
+                            "exact text" 1
+                            font "gui/fonts/MetronBook-Bold22"
+                            "exact text size" 16
+                        }
+                        TextWidgetClass BDE_VIPRepLabel
+                        {
+                            ignorepointer 1
+                            position 0.04 0.50
+                            size 0.45 0.04
+                            text "RP Gain Multiplier"
+                            font "gui/fonts/sdf_MetronLight24"
+                            "exact text" 1
+                            "exact text size" 15
+                        }
+                        EditBoxWidgetClass BDE_VIPRepMultiplier
+                        {
+                            position 0.50 0.495
+                            size 0.46 0.05
+                            style Editor
+                            text "1.0"
+                            "limit visible" 1
+                            "Use default text" 0
+                            "exact text" 1
+                            font "gui/fonts/MetronBook-Bold22"
+                            "exact text size" 16
+                        }
+                        TextWidgetClass BDE_VIPPointsLabel
+                        {
+                            ignorepointer 1
+                            position 0.04 0.565
+                            size 0.45 0.04
+                            text "Point Store Multiplier"
+                            font "gui/fonts/sdf_MetronLight24"
+                            "exact text" 1
+                            "exact text size" 15
+                        }
+                        EditBoxWidgetClass BDE_VIPPointsMultiplier
+                        {
+                            position 0.50 0.56
+                            size 0.46 0.05
+                            style Editor
+                            text "1.0"
+                            "limit visible" 1
+                            "Use default text" 0
+                            "exact text" 1
+                            font "gui/fonts/MetronBook-Bold22"
+                            "exact text size" 16
+                        }
+                        CheckBoxWidgetClass BDE_VIPPremiumBattlePass
+                        {
+                            position 0.04 0.63
+                            size 0.92 0.06
+                            style DayZDefaultCheckBox
+                            text ""
+
+                            {
+                                MultilineTextWidgetClass BDE_VIPPremiumBattlePassLabel
+                                {
+                                    ignorepointer 1
+                                    position 0.09 0
+                                    size 0.90 1
+                                    hexactpos 0
+                                    vexactpos 0
+                                    hexactsize 0
+                                    vexactsize 0
+                                    text "Premium Battle Pass /\nVIP Point Store Access"
+                                    font "gui/fonts/sdf_MetronBook24"
+                                    "exact text" 1
+                                    "exact text size" 14
+                                    "text halign" left
+                                    "text valign" center
+                                    wrap 1
+                                }
+                            }
+                        }
+                        MultilineTextWidgetClass BDE_VIPTierPreview
+                        {
+                            ignorepointer 1
+                            position 0.04 0.70
+                            size 0.92 0.11
+                            text "Base payouts"
+                            font "gui/fonts/sdf_MetronLight24"
+                            "exact text" 1
+                            "exact text size" 14
+                            wrap 1
+                        }
+                        GridSpacerWidgetClass BDE_VIPTierButtons
+                        {
+                            ignorepointer 0
+                            position 0.04 0.83
+                            size 0.92 0.08
+                            Columns 2
+                            Rows 1
+                            Padding 0
+                            Margin 5
+                            {
+                                ButtonWidgetClass BDE_VIPSaveTier
+                                {
+                                    color 0.08 0.25 0.15 1
+                                    size 1 1
+                                    style DayZDefaultButtonNoBorder
+                                    text ""
+
+                                    {
+                                        TextWidgetClass BDE_VIPSaveTierLabel
+                                        {
+                                            ignorepointer 1
+                                            position 0.03 0
+                                            size 0.94 1
+                                            hexactpos 0
+                                            vexactpos 0
+                                            hexactsize 0
+                                            vexactsize 0
+                                            text "Save Tier"
+                                            font "gui/fonts/sdf_MetronBook24"
+                                            "exact text" 1
+                                            "exact text size" 16
+                                            "text halign" center
+                                            "text valign" center
+                                        }
+                                    }
+                                }
+                                ButtonWidgetClass BDE_VIPNewTier
+                                {
+                                    color 0.08 0.15 0.21 1
+                                    size 1 1
+                                    style DayZDefaultButtonNoBorder
+                                    text ""
+
+                                    {
+                                        TextWidgetClass BDE_VIPNewTierLabel
+                                        {
+                                            ignorepointer 1
+                                            position 0.03 0
+                                            size 0.94 1
+                                            hexactpos 0
+                                            vexactpos 0
+                                            hexactsize 0
+                                            vexactsize 0
+                                            text "New Tier"
+                                            font "gui/fonts/sdf_MetronBook24"
+                                            "exact text" 1
+                                            "exact text size" 16
+                                            "text halign" center
+                                            "text valign" center
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        TextWidgetClass BDE_VIPTierStatus
+                        {
+                            ignorepointer 1
+                            position 0.04 0.92
+                            size 0.92 0.06
+                            text ""
+                            font "gui/fonts/sdf_MetronLight24"
+                            "exact text" 1
+                            "exact text size" 13
+                            "text halign" center
+                            "text valign" center
+                        }
+                    }
+                }
+
+                PanelWidgetClass BDE_VIPDonationPanel
+                {
+                    ignorepointer 0
+                    color 0.035 0.035 0.035 0.92
+                    position 0.70 0.655
+                    size 0.29 0.325
+                    style rover_sim_colorable
+                    {
+                        PanelWidgetClass BDE_VIPDonationHeaderBack
+                        {
+                            ignorepointer 1
+                            color 0.2549 0.2549 0.2549 1
+                            position 0.025 0.035
+                            size 0.95 0.17
+                            style rover_sim_colorable
+                        }
+                        TextWidgetClass BDE_VIPDonationHeader
+                        {
+                            ignorepointer 1
+                            position 0.025 0.035
+                            size 0.95 0.17
+                            text "DONATION GOAL"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 20
+                            "text halign" center
+                            "text valign" center
+                        }
+                        TextWidgetClass BDE_VIPDonationSummary
+                        {
+                            ignorepointer 1
+                            position 0.04 0.23
+                            size 0.92 0.12
+                            text "$0 / $0"
+                            font "gui/fonts/sdf_MetronBook24"
+                            "exact text" 1
+                            "exact text size" 18
+                            "text halign" center
+                            "text valign" center
+                        }
+                        GridSpacerWidgetClass BDE_VIPDonationValues
+                        {
+                            ignorepointer 0
+                            position 0.04 0.38
+                            size 0.92 0.18
+                            Columns 2
+                            Rows 1
+                            Padding 0
+                            Margin 5
+                            {
+                                EditBoxWidgetClass BDE_VIPDonationCurrent
+                                {
+                                    size 1 1
+                                    style Editor
+                                    text "0"
+                                    "limit visible" 1
+                                    "Use default text" 0
+                                    "exact text" 1
+                                    font "gui/fonts/MetronBook-Bold22"
+                                    "exact text size" 16
+                                }
+                                EditBoxWidgetClass BDE_VIPDonationGoal
+                                {
+                                    size 1 1
+                                    style Editor
+                                    text "0"
+                                    "limit visible" 1
+                                    "Use default text" 0
+                                    "exact text" 1
+                                    font "gui/fonts/MetronBook-Bold22"
+                                    "exact text size" 16
+                                }
+                            }
+                        }
+                        GridSpacerWidgetClass BDE_VIPDonationButtons
+                        {
+                            ignorepointer 0
+                            position 0.04 0.59
+                            size 0.92 0.18
+                            Columns 2
+                            Rows 1
+                            Padding 0
+                            Margin 5
+                            {
+                                ButtonWidgetClass BDE_VIPDonationSave
+                                {
+                                    color 0.08 0.25 0.15 1
+                                    size 1 1
+                                    style DayZDefaultButtonNoBorder
+                                    text ""
+
+                                    {
+                                        TextWidgetClass BDE_VIPDonationSaveLabel
+                                        {
+                                            ignorepointer 1
+                                            position 0.03 0
+                                            size 0.94 1
+                                            hexactpos 0
+                                            vexactpos 0
+                                            hexactsize 0
+                                            vexactsize 0
+                                            text "Save Goal"
+                                            font "gui/fonts/sdf_MetronBook24"
+                                            "exact text" 1
+                                            "exact text size" 16
+                                            "text halign" center
+                                            "text valign" center
+                                        }
+                                    }
+                                }
+                                ButtonWidgetClass BDE_VIPDonationReset
+                                {
+                                    color 0.384 0.082 0.11 1
+                                    size 1 1
+                                    style DayZDefaultButtonNoBorder
+                                    text ""
+
+                                    {
+                                        TextWidgetClass BDE_VIPDonationResetLabel
+                                        {
+                                            ignorepointer 1
+                                            position 0.03 0
+                                            size 0.94 1
+                                            hexactpos 0
+                                            vexactpos 0
+                                            hexactsize 0
+                                            vexactsize 0
+                                            text "Reset Current"
+                                            font "gui/fonts/sdf_MetronBook24"
+                                            "exact text" 1
+                                            "exact text size" 16
+                                            "text halign" center
+                                            "text valign" center
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        TextWidgetClass BDE_VIPDonationStatus
+                        {
+                            ignorepointer 1
+                            position 0.04 0.80
+                            size 0.92 0.15
+                            text ""
+                            font "gui/fonts/sdf_MetronLight24"
+                            "exact text" 1
+                            "exact text size" 13
+                            wrap 1
+                            "text halign" center
+                            "text valign" center
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
